@@ -322,7 +322,7 @@ width: 11px;
 ============================================================*/
 
 #service .media > .pull-left{
-    margin-right: 50px;
+    /*margin-right: 50px;*/
 }
 
 #service .media .media-body h3{
@@ -428,6 +428,15 @@ width: 11px;
   padding-left: 46px;
 }
 
+.thumbnail {
+    background-color: #0f748f;
+    border-color: #0f748f;
+    color: white;
+}
+
+.thumbnail .caption > p {
+    color: white;
+}
 
 /*============================================================
     Portfolio
