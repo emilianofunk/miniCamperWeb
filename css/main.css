@@ -521,6 +521,13 @@ figcaption.mask {
     top: 30%;
 }
 
+.portfolio-item2 {
+  float: left;
+  max-height: 228px;
+  overflow: hidden;
+  position: relative;
+}
+
 figcaption.mask h3 {
   color: #1f2021;
   font-size: 20px;
@@ -530,13 +537,6 @@ figcaption.mask h3 {
 figcaption.mask span {
   color: #0FAED9;
 }
-.portfolio-item2 {
-  float: left;
-  max-height: 228px;
-  overflow: hidden;
-  position: relative;
-}
-
 
 
 /*============================================================
