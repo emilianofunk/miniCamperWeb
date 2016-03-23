@@ -322,7 +322,7 @@ width: 11px;
 ============================================================*/
 
 #service .media > .pull-left{
-    margin-right: 50px;
+    /*margin-right: 50px;*/
 }
 
 #service .media .media-body h3{
@@ -428,6 +428,15 @@ width: 11px;
   padding-left: 46px;
 }
 
+.thumbnail {
+    background-color: #0f748f;
+    border-color: #0f748f;
+    color: white;
+}
+
+.thumbnail .caption > p {
+    color: white;
+}
 
 /*============================================================
     Portfolio
@@ -510,6 +519,48 @@ figcaption.mask {
 
 .portfolio-item:hover .plus {
     top: 30%;
+}
+
+/*============================================================
+    OTROS PRODUCTOS
+============================================================*/
+#productos2 {
+    background-color: #1F2021;
+}
+
+.portfolio-item2 {
+  float: left;
+  max-height: 228px;
+  overflow: hidden;
+  position: relative;
+}
+
+.jumbotron {
+  padding: 48px 20px;
+  background-image: url("../img/portfolio/accesorios.jpg");
+  background-size: 100%;
+  color: black;
+  border: solid 4px aliceblue;
+  border-radius: 7px;
+  height: 250px;
+}
+
+.jumbotron:hover{
+  border-color: #337ab7;
+}
+
+.jumbotron h1 {
+  font-size: 40px;
+  background-color: white;
+  opacity: 0.8;
+  width: -moz-max-content;
+  border-radius: 7px;
+}
+
+.jumbotron a {
+  position: absolute;
+  bottom: 50px;
+  right: 35px;
 }
 
 figcaption.mask h3 {
@@ -902,6 +953,17 @@ figcaption.mask span {
   color: #1f2021;
   display: block;
   margin-bottom: 35px;
+}
+
+/*============================================================
+    Catalogo
+============================================================*/
+.navbar-fixed-top-static{
+  
+}
+
+.container-catalog {
+  margin-top: 120px;
 }
 
 
