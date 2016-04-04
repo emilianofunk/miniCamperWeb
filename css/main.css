@@ -563,6 +563,14 @@ figcaption.mask {
   right: 35px;
 }
 
+.video-jumbotron{
+  margin-top: 75px;
+  visibility: visible;
+  padding: 40px 60px;
+  background: rgb(238, 238, 238) none repeat scroll 0% 0%;
+  border: medium none rgb(238, 238, 238); color: black;
+}
+
 figcaption.mask h3 {
   color: #1f2021;
   font-size: 20px;
@@ -959,7 +967,7 @@ figcaption.mask span {
     Catalogo
 ============================================================*/
 .navbar-fixed-top-static{
-  
+
 }
 
 .container-catalog {
