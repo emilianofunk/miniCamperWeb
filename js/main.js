@@ -13,7 +13,7 @@ $(function(){
 
     jQuery(window).scroll(function () {
         if (jQuery(window).scrollTop() > 400) {
-            jQuery("#navigation").css("background-color","#00C7FC");
+            jQuery("#navigation").css("background-color","#16a7d0");
             jQuery("#navigation").addClass("animated-nav");
         } else {
             jQuery("#navigation").css("background-color","transparent");
@@ -37,7 +37,11 @@ $(function(){
 
     // portfolio filtering
 
-    $("#projects").mixItUp();
+    $('#projects').mixItUp({
+      load: {
+        filter: '.all'
+      }
+    });
 
     //fancybox
 
@@ -107,16 +111,16 @@ function initProgress(el){
 }
 
 
-            
+
 function progress(percent, $element) {
     var progressBarWidth = 0;
-    
+
     (function myLoop (i,max) {
         progressBarWidth = i * $element.width() / 100;
-        setTimeout(function () {   
+        setTimeout(function () {
         $element.find('div').find('small').html(i+'%');
         $element.find('div').width(progressBarWidth);
-        if (++i<=max) myLoop(i,max);     
+        if (++i<=max) myLoop(i,max);
         }, 10)
-    })(0,percent);  
-}   
+    })(0,percent);
+}

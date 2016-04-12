@@ -120,7 +120,7 @@ width: 11px;
 }
 
 .btn-blue {
-  background-color: #00c7fc;
+  background-color: #16a7d0;
   color: #fff;
   font-size: 16px;
   line-height: 24px;
@@ -181,8 +181,8 @@ width: 11px;
 }
 
 .navigation .navbar-nav > li.current > a {
-  color: #00C7FC;
-  border-bottom: 1px solid #00C7FC;
+  color: #16a7d0;
+  border-bottom: 1px solid #16a7d0;
 }
 
 .animated-nav .navigation .navbar-nav > li.current > a {
@@ -312,7 +312,7 @@ width: 11px;
 }
 
 .carousel-indicators .active {
-  background-color: #00c7fc;
+  background-color: #16a7d0;
   border: 0;
 }
 
@@ -326,7 +326,7 @@ width: 11px;
 }
 
 #service .media .media-body h3{
-    color: #00C7FC;
+    color: #16a7d0;
     font-weight: 400;
     font-size: 20px;
     margin-bottom: 15px;
@@ -360,7 +360,7 @@ width: 11px;
 }
 
 .service-item h3 {
-  color: #00c7fc;
+  color: #16a7d0;
   font-size: 20px;
   margin-bottom: 28px;
 }
@@ -464,7 +464,7 @@ width: 11px;
 
 .project-filter ul li a:hover,
 .project-filter ul li a.active {
-    background-color: #00C7FC;
+    background-color: #16a7d0;
     color: #fff;
 }
 
@@ -481,7 +481,7 @@ width: 11px;
 }
 
 .plus {
-  background: url("../img/icons/plus.png") no-repeat scroll center center #0faed9;
+  background: url("../img/icons/plus.png") no-repeat scroll center center #16a7d0;
   border-radius: 50%;
   display: block;
   height: 80px;
@@ -537,12 +537,23 @@ figcaption.mask {
 
 .jumbotron {
   padding: 48px 20px;
-  background-image: url("../img/portfolio/accesorios.jpg");
   background-size: 100%;
   color: black;
   border: solid 4px aliceblue;
   border-radius: 7px;
   height: 250px;
+}
+
+.jumbotron-accesorios{
+  background-image: url("../img/portfolio/accesorios.jpg");
+}
+
+.jumbotron-trailer{
+  background-image: url("../img/portfolio/trailer.jpeg");
+}
+
+.jumbotron-nautica{
+  background-image: url("../img/portfolio/nautica.jpg");
 }
 
 .jumbotron:hover{
@@ -578,7 +589,7 @@ figcaption.mask h3 {
 }
 
 figcaption.mask span {
-  color: #0FAED9;
+  color: #16a7d0;
 }
 
 
@@ -725,8 +736,8 @@ figcaption.mask span {
 
 .owl-controls .owl-page.active span,
 .owl-controls .owl-page:hover span {
-  background-color: #00C7FC;
-  border-color: #00C7FC;
+  background-color: #16a7d0;
+  border-color: #16a7d0;
 }
 
 
@@ -749,7 +760,7 @@ figcaption.mask span {
 .progress .bar {
   width: 0;
   height: 25px;
-  background-color: #00C7FC;
+  background-color: #16a7d0;
 
   -webkit-transition: width 0.6s ease;
      -moz-transition: width 0.6s ease;
@@ -770,7 +781,7 @@ figcaption.mask span {
 }
 
 .progress-success .bar, .progress-green .bar {
-  background-color: #00C7FC;
+  background-color: #16a7d0;
 
 }
 
@@ -808,7 +819,7 @@ figcaption.mask span {
 }
 
 .pricing-table .price {
-  border-top: 1px solid #00c7fc;
+  border-top: 1px solid #16a7d0;
   padding: 35px 0 45px;
 }
 
@@ -836,8 +847,8 @@ figcaption.mask span {
 }
 
 .pricing-table ul {
-  border-bottom: 1px solid #00c7fc;
-  border-top: 1px solid #00c7fc;
+  border-bottom: 1px solid #16a7d0;
+  border-top: 1px solid #16a7d0;
 }
 
 .pricing-table ul li {
@@ -847,7 +858,7 @@ figcaption.mask span {
 }
 
 .pricing-table ul li:after {
-  border-bottom: 1px solid #00c7fc;
+  border-bottom: 1px solid #16a7d0;
   bottom: 0;
   content: "";
   display: block;
@@ -866,7 +877,7 @@ figcaption.mask span {
 }
 
 .btn-price {
-  border: 1px solid #00c7fc;
+  border: 1px solid #16a7d0;
   color: #1f2021;
   margin-top: 40px;
   padding: 10px 30px;
@@ -914,7 +925,7 @@ figcaption.mask span {
 }
 
 .subscription-form #mail-submit {
-  background-color: #00c7fc;
+  background-color: #16a7d0;
   border: 0 none;
   color: #fff;
   padding: 16px 35px;
@@ -1020,7 +1031,7 @@ figcaption.mask span {
 }
 
 .footer-social ul li a:hover {
-  color: #00C7FC;
+  color: #16a7d0;
 }
 
 .copyright {
@@ -1030,7 +1041,7 @@ figcaption.mask span {
 }
 
 .copyright a {
-    color: #00C7FC;
+    color: #16a7d0;
 }
 
 .copyright a:hover {
