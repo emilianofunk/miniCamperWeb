@@ -477,7 +477,7 @@ width: 11px;
     float: left;
     overflow: hidden;
     width: 25%;
-    max-height: 228px;
+    /*max-height: 228px;*/
 }
 
 .plus {
