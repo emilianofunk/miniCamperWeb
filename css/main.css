@@ -806,6 +806,12 @@ figcaption.mask span {
     margin-bottom: 15px;
 }
 
+.logo-quote {
+    background: white none repeat scroll 0 0;
+    border: 10px solid white;
+    border-radius: 15px;
+    width: 200px;
+}
 
 
 /*============================================================
