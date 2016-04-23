@@ -84,6 +84,37 @@ $(function(){
         singleItem:true
     });
 
+
+/* ========================================================================= */
+//      Contact Form Ajax request
+/* ========================================================================= */
+
+    $('.form').on('submit', function(event){
+      event.preventDefault();
+      event.stopPropagation();
+
+      console.log("e");
+
+      var $this = $(this);
+
+      var data = {
+        name_surname: $('#name_surname').val(),
+        email: $('#email').val(),
+        subject: 'Info',
+        message: $('#message').val()
+      };
+
+      $.ajax({
+        type: "POST",
+        url: "email.php",
+        data: data,
+        success: function(msg){
+          $('.contact-success').fadeIn().delay(3000).fadeOut();
+          $('#form-contact')[0].reset();
+          $('.contact-success').focus();
+        }
+      });
+    });
 });
 
 /* ========================================================================= */
@@ -124,34 +155,3 @@ function progress(percent, $element) {
         }, 10)
     })(0,percent);
 }
-
-/* ---------------------------------------------------------------------- */
-//      Contact Form Ajax request
-/* ---------------------------------------------------------------------- */
-
-$('.form').on('submit', function(event){
-  event.preventDefault();
-  event.stopPropagation();
-
-  var $this = $(this);
-
-  var data = {
-    name_surname: $('#name_surname').val(),
-    email: $('#email').val(),
-    subject: 'Info',
-    message: $('#message').val()
-  };
-
-  $.ajax({
-    type: "POST",
-    url: "email.php",
-    data: data,
-    success: function(msg){
-      $('.contact-success').fadeIn().delay(3000).fadeOut();
-      $('#form-contact')[0].reset();
-      $('.contact-success').focus();
-      console.log("e");
-      
-    }
-  });
-});
