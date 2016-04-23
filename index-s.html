@@ -857,7 +857,7 @@ End #subscribe
 
       <div class="col-md-8 col-sm-9 wow fadeInLeft">
         <div class="contact-form clearfix">
-          <form action="index.html" method="post" id="form-contact">
+          <form class="form" role="form" id="form-contact">
             <div class="input-field">
               <input type="text" class="form-control" name="name" placeholder="Nombre y apellido" required="" id="name_surname">
             </div>
@@ -867,7 +867,9 @@ End #subscribe
             <div class="input-field message">
               <textarea name="message" class="form-control" placeholder="Escriba un mensaje" required="" maxlength="500" id="message"></textarea>
             </div>
-            <input type="submit" class="btn btn-blue pull-right" value="Enviar" id="msg-submit">
+            <div class="">
+              <input type="submit" class="btn btn-blue pull-right" value="Enviar Mensaje" id="msg-submit">
+            </div>
           </form>
           <p class="contact-success">Your Message has been Successfully Sent!</p>
   				<p class="contact-error">Error! Something went wrong!</p>
@@ -926,7 +928,7 @@ End #footer
 JavaScripts
 ========================== -->
 <!-- main jQuery -->
-@*<script src="js/vendor/jquery-1.11.1.min.js"></script>
+<script src="js/vendor/jquery-1.11.1.min.js"></script>
 <!-- Bootstrap -->
 <script src="js/bootstrap.min.js"></script>
 <!-- jquery.nav -->
@@ -946,7 +948,7 @@ JavaScripts
 <!-- WOW script -->
 <script src="js/wow.min.js"></script>
 <!-- theme custom scripts -->
-<script src="js/main.js"></script>*@
+<script src="js/main.js"></script>
 
 
 

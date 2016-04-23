@@ -129,17 +129,19 @@ function progress(percent, $element) {
 //      Contact Form Ajax request
 /* ---------------------------------------------------------------------- */
 
-$('#form-contact').on('submit', function(event){
+$('.form').on('submit', function(event){
   event.preventDefault();
+  event.stopPropagation();
 
   var $this = $(this);
 
   var data = {
-    name_surname: $('#first_name').val(),
+    name_surname: $('#name_surname').val(),
     email: $('#email').val(),
     subject: 'Info',
     message: $('#message').val()
   };
+
   $.ajax({
     type: "POST",
     url: "email.php",
@@ -148,7 +150,8 @@ $('#form-contact').on('submit', function(event){
       $('.contact-success').fadeIn().delay(3000).fadeOut();
       $('#form-contact')[0].reset();
       $('.contact-success').focus();
-      console.log("success");
+      console.log("e");
+      
     }
   });
 });
