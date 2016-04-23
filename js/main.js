@@ -124,3 +124,31 @@ function progress(percent, $element) {
         }, 10)
     })(0,percent);
 }
+
+/* ---------------------------------------------------------------------- */
+//      Contact Form Ajax request
+/* ---------------------------------------------------------------------- */
+
+$('#form-contact').on('submit', function(event){
+  event.preventDefault();
+
+  var $this = $(this);
+
+  var data = {
+    name_surname: $('#first_name').val(),
+    email: $('#email').val(),
+    subject: 'Info',
+    message: $('#message').val()
+  };
+  $.ajax({
+    type: "POST",
+    url: "email.php",
+    data: data,
+    success: function(msg){
+      $('.contact-success').fadeIn().delay(3000).fadeOut();
+      $('#form-contact')[0].reset();
+      $('.contact-success').focus();
+      console.log("success");
+    }
+  });
+});

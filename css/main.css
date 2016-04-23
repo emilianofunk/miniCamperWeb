@@ -980,6 +980,26 @@ figcaption.mask span {
   margin-bottom: 35px;
 }
 
+.contact-success {
+  background: #64AB89; /*transparent*/
+  border: 1px solid #64AB89;
+  border-radius: 2px;
+  padding: 5px;
+  color: white;
+  text-align: center;
+  display: none;
+}
+
+.contact-error {
+  background: transparent;
+  border: 1px solid #A87C7C;
+  border-radius: 2px;
+  padding: 5px;
+  color: #A87C7C;
+  text-align: center;
+  display: none;
+}
+
 /*============================================================
     Catalogo
 ============================================================*/
