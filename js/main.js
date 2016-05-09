@@ -93,8 +93,6 @@ $(function(){
       event.preventDefault();
       event.stopPropagation();
 
-      console.log("e");
-
       var $this = $(this);
 
       var data = {

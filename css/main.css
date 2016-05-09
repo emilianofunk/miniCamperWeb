@@ -536,12 +536,12 @@ figcaption.mask {
 }
 
 .jumbotron {
+  background-position: center;
   padding: 48px 20px;
   background-size: 100%;
   color: black;
   border: solid 4px aliceblue;
-  border-radius: 7px;
-  height: 250px;
+  height: 230px;
 }
 
 .jumbotron-accesorios{
@@ -602,7 +602,8 @@ figcaption.mask span {
 }
 
 .about-us img {
-  margin: 0 auto;
+  margin: 0 0;
+  padding-bottom: 10%;
 }
 
 /* Counter section */
