@@ -95,12 +95,13 @@
         <div class="media" ng-repeat="product in products">
           <div class="media-left media-middle">
             <a href="#">
-              <img class="media-object" src="img/test.svg" alt="..." style="width:100px;height:100px">
+              <!-- <img class="media-object" ng-src="img/catalogo/{{product.imagen1 || 'noimage'}}.jpg" alt="..." style="width:100px;height:100px"> -->
+              <img check-image ng-src="img/catalogo/{{product.imagen1}}.jpg" alt="Image" style="width:100px;height:100px"  >
             </a>
           </div>
           <div class="media-body">
-            <h4 class="media-heading">{{product.Titulo}}</h4>
-            {{product.Descripcion}}
+            <h4 class="media-heading">{{product.titulo}}</h4>
+            {{product.descripcion}}
           </div>
         </div>
       </div>

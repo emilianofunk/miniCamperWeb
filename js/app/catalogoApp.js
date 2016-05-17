@@ -62,8 +62,7 @@ angular
 
   }])
   .factory('productsFactory', ['$http', function ($http) {
-    //var url = 'http://outworktime.com/catalogo.csv';
-    var url = 'http://outworktime.com/updateproducts.php';
+wwwwww    var url = 'http://outworktime.com/updateproducts.php';
 
     return {
       getProducts: function () {
@@ -71,4 +70,17 @@ angular
       }
     };
 
-  }]);
+  }])
+  .directive('checkImage', function($http) {
+    return {
+        restrict: 'A',
+        link: function(scope, element, attrs) {
+            attrs.$observe('ngSrc', function(ngSrc) {
+                $http.get(ngSrc).success(function(){
+                }).error(function(){
+                    element.attr('src', 'img/catalogo/noimage.jpg'); // set default image
+                });
+            });
+        }
+    };
+});
