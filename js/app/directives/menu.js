@@ -12,9 +12,6 @@ angular.module('catalogoApp')
 .directive('menuAccordion', function() {
   return {
     restrict: 'E',
-    scope : {
-      categories: '='
-    },
     templateUrl: 'js/app/directives/menu.html'
   };
 });

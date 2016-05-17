@@ -3,6 +3,17 @@
 $(function(){
   jQuery("#navigation").css("background-color","#16a7d0");
   jQuery("#navigation").addClass("animated-nav");
+
+  $('.panel-heading a').click(function() {
+      $('.panel-heading').removeClass('actives');
+      $(this).parents('.panel-heading').addClass('actives');
+
+      $('.panel-title').removeClass('actives'); //just to make a visual sense
+      $(this).parent().addClass('actives'); //just to make a visual sense
+
+      alert($(this).parents('.panel-heading').attr('class'));
+   });
+
 });
 
 angular
@@ -12,12 +23,11 @@ angular
   })
   .controller('MainCtrl', ['$scope', 'productsFactory', function ($scope, productsFactory) {
 
-    $scope.categories = [{name: 'Accesorios', subcategories : []}, {name:'Náutica', subcategories : []}, {name:'Trailers', subcategories : []} ];
-    /*
-    $scope.showError = false;
-    $scope.inProgress = false;
-    $scope.showOlapicModal = false;
-    */
+    $scope.categories = [
+      {id: 1, name: 'Accesorios' , subcategories : ['Todos'] },
+      {id: 2, name: 'Náutica'    , subcategories : ['Todos', 'Remos', 'Kayaks'] },
+      {id: 3, name: 'Trailers'   , subcategories : ['Todos', 'Mediano', 'Pequeño'] }];
+
     var onInit = function () {
       $scope.loadProducts();
     };

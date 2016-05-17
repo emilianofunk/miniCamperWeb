@@ -1016,6 +1016,13 @@ figcaption.mask span {
   }
 }
 
+.panel-group {
+  margin-bottom: 0px;
+}
+
+.active {
+  border: 2px solid lightblue;
+}
 
 
 /*============================================================
