@@ -1012,6 +1012,13 @@ figcaption.mask span {
   margin-top: 120px;
 }
 
+@media (min-width: 992px) {
+  .container-catalog {
+    width: 1016px;
+    margin: 100px auto;
+  }
+}
+
 
 
 /*============================================================

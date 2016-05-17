@@ -82,98 +82,28 @@
   <!--
   Home Slider
   ==================================== -->
-  <section id="home" class="container-catalog">
-    <div class="">
+  <section id="home" class="container-catalog"ng-app="catalogoApp">
+    <div class="" ng-controller="MainCtrl">
       <!-- BEGIN ASIDE -->
       <div class="col-md-3">
-        <ul class="list-group">
-          <li class="list-group-item">
-            <span class="badge">14</span>
-            Cras justo odio
-          </li>
-          <li class="list-group-item">
-            <span class="badge">2</span>
-            Dapibus ac facilisis in
-          </li>
-          <li class="list-group-item">
-            <span class="badge">1</span>
-            Morbi leo risus
-          </li>
-        </ul>
+        <menu-accordion> </menu-accordion>
       </div>
 
       <!-- BEGIN MAIN-->
-      <div class="col-md-9">
+      <div class="col-md-9" >
         <!-- BEGIN MEDIA UNIT -->
-        <div class="media">
+        <div class="media" ng-repeat="product in products">
           <div class="media-left media-middle">
             <a href="#">
               <img class="media-object" src="img/test.svg" alt="..." style="width:100px;height:100px">
             </a>
           </div>
           <div class="media-body">
-            <h4 class="media-heading">Middle aligned media</h4>
-            Aquí se redactaría una breve descripción del producto, con algún detalle técnico también (si se desea)
+            <h4 class="media-heading">{{product.Titulo}}</h4>
+            {{product.Descripcion}}
           </div>
         </div>
-        <!-- END MEDIA UNIT -->
-        <div class="media">
-          <div class="media-left media-middle">
-            <a href="#">
-              <img class="media-object" src="img/test.svg" alt="..." style="width:100px;height:100px">
-            </a>
-          </div>
-          <div class="media-body">
-            <h4 class="media-heading">Middle aligned media</h4>
-            Aquí se redactaría una breve descripción del producto, con algún detalle técnico también (si se desea)
-          </div>
-        </div>
-        <div class="media">
-          <div class="media-left media-middle">
-            <a href="#">
-              <img class="media-object" src="img/test.svg" alt="..." style="width:100px;height:100px">
-            </a>
-          </div>
-          <div class="media-body">
-            <h4 class="media-heading">Middle aligned media</h4>
-            Aquí se redactaría una breve descripción del producto, con algún detalle técnico también (si se desea)
-          </div>
-        </div>
-        <div class="media">
-          <div class="media-left media-middle">
-            <a href="#">
-              <img class="media-object" src="img/test.svg" alt="..." style="width:100px;height:100px">
-            </a>
-          </div>
-          <div class="media-body">
-            <h4 class="media-heading">Middle aligned media</h4>
-            Aquí se redactaría una breve descripción del producto, con algún detalle técnico también (si se desea)
-          </div>
-        </div>
-        <div class="media">
-          <div class="media-left media-middle">
-            <a href="#">
-              <img class="media-object" src="img/test.svg" alt="..." style="width:100px;height:100px">
-            </a>
-          </div>
-          <div class="media-body">
-            <h4 class="media-heading">Middle aligned media</h4>
-            Aquí se redactaría una breve descripción del producto, con algún detalle técnico también (si se desea)
-          </div>
-        </div>
-        <div class="media">
-          <div class="media-left media-middle">
-            <a href="#">
-              <img class="media-object" src="img/test.svg" alt="..." style="width:100px;height:100px">
-            </a>
-          </div>
-          <div class="media-body">
-            <h4 class="media-heading">Middle aligned media</h4>
-            Aquí se redactaría una breve descripción del producto, con algún detalle técnico también (si se desea)
-          </div>
-        </div>
-      </div> <!-- END MAIN-->
-
+      </div>
     </div>
   </section>
   <!--
@@ -221,55 +151,28 @@
   JavaScripts
   ========================== -->
   <!-- main jQuery -->
-  @*<script src="js/vendor/jquery-1.11.1.min.js"></script>
-  <!-- Bootstrap -->
-  <script src="js/bootstrap.min.js"></script>
-  <!-- jquery.nav -->
-  <script src="js/jquery.nav.js"></script>
-  <!-- Portfolio Filtering -->
-  <script src="js/jquery.mixitup.min.js"></script>
-  <!-- Fancybox -->
-  <script src="js/jquery.fancybox.pack.js"></script>
-  <!-- Parallax sections -->
-  <script src="js/jquery.parallax-1.1.3.js"></script>
-  <!-- jQuery Appear -->
-  <script src="js/jquery.appear.js"></script>
-  <!-- countTo -->
-  <script src="js/jquery-countTo.js"></script>
-  <!-- owl carousel -->
-  <script src="js/owl.carousel.min.js"></script>
-  <!-- WOW script -->
-  <script src="js/wow.min.js"></script>
-  <!-- theme custom scripts -->
-  <script src="js/main.js"></script>*@
-
-
-
-  <!--
-  JavaScripts
-  ========================== -->
-
-  <!-- main jQuery -->
   <script src="js/vendor/jquery-1.11.1.min.js"></script>
   <!-- Bootstrap -->
   <script src="js/bootstrap.min.js"></script>
   <!-- jquery.nav -->
   <script src="js/jquery.nav.js"></script>
-  <!-- Portfolio Filtering -->
-  <script src="js/jquery.mixitup.min.js"></script>
-  <!-- Fancybox -->
-  <script src="js/jquery.fancybox.pack.js"></script>
+  <!-- Portfolio Filtering
+  <script src="js/jquery.mixitup.min.js"></script> -->
+  <!-- Fancybox
+  <script src="js/jquery.fancybox.pack.js"></script> -->
   <!-- Parallax sections -->
   <script src="js/jquery.parallax-1.1.3.js"></script>
   <!-- jQuery Appear -->
   <script src="js/jquery.appear.js"></script>
-  <!-- countTo -->
-  <script src="js/jquery-countTo.js"></script>
-  <!-- owl carousel -->
-  <script src="js/owl.carousel.min.js"></script>
-  <!-- WOW script -->
-  <script src="js/wow.min.js"></script>
+  <!-- countTo
+  <script src="js/jquery-countTo.js"></script> -->
+  <!-- owl carousel
+  <script src="js/owl.carousel.min.js"></script> -->
+  <!-- Angular script -->
+  <script src="js/angular.min.js"></script>
   <!-- theme custom scripts -->
-  <script src="js/main.js"></script>
+  <script src="js/app/catalogoApp.js"></script>
+  <script src="js/app/directives/menu.js"></script>
+
 </body>
 </html>

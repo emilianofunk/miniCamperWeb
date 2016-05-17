@@ -1,19 +1,28 @@
 <?PHP
-$csv = array();
-$lines = file('products.csv', FILE_IGNORE_NEW_LINES);
+  header("Access-Control-Allow-Origin: *");
 
-foreach ($lines as $key => $value) {
-    $csv[$key] = str_getcsv($value);
-}
+  // php function to convert csv to json format
+function csvToJson($fname) {
+    // open csv file
+    if (!($fp = fopen($fname, 'r'))) {
+        die("Can't open file...");
+    }
 
-echo ' <table style="width:100%">';
-foreach ($csv as $value) {
-  echo  '<tr>
-    <td>' . $value[0] . '</td>
-    <td>' . $value[1] . '</td>
-    <td>' . $value[2] . '</td>
-  </tr>';
-}
-echo '</table> ';
+    //read csv headers
+    $key = fgetcsv($fp,"1024",",");
 
+    // parse csv rows into array
+    $json = array();
+        while ($row = fgetcsv($fp,"1024",",")) {
+        $json[] = array_combine($key, $row);
+    }
+
+    // release file handle
+    fclose($fp);
+
+    // encode array to json
+    return json_encode($json);
+  }
+
+ echo csvToJson("catalogo.csv");
 ?>
