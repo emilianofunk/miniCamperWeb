@@ -1,7 +1,7 @@
 <div class="panel-group" ng-repeat="category in categories">
   <div class="panel panel-default">
-    <div class="panel-heading">
-      <h4 class="panel-title">
+    <div class="panel-heading" ng-click="changeCategory(category.name)">
+      <h4 class="panel-title" >
         <a data-toggle="collapse" href="#collapse{{category.id}}">{{category.name}}</a>
       </h4>
     </div>

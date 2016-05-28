@@ -92,7 +92,7 @@
       <!-- BEGIN MAIN-->
       <div class="col-md-9" >
         <!-- BEGIN MEDIA UNIT -->
-        <div class="media" ng-repeat="product in products">
+        <div class="media" ng-repeat="product in products | filter: (!!categoryFilter || undefined) && {'categoria': categoryFilter}">
           <div class="media-left media-middle">
             <a href="#">
               <!-- <img class="media-object" ng-src="img/catalogo/{{product.imagen1 || 'noimage'}}.jpg" alt="..." style="width:100px;height:100px"> -->

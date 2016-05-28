@@ -4,67 +4,67 @@
 /* =================================== */
 
 body {
-    background-color: #fff;
-    font-family: 'Open Sans', sans-serif;
-    line-height: 1;
-	font-size: 13px;
-    color: #a8a8a8;
+  background-color: #fff;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1;
+  font-size: 13px;
+  color: #a8a8a8;
 }
 
 ol, ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 figure, p {
-    margin: 0;
+  margin: 0;
 }
 
 a {
-    -webkit-transition: all .3s ease-in 0s;
-       -moz-transition: all .3s ease-in 0s;
-        -ms-transition: all .3s ease-in 0s;
-         -o-transition: all .3s ease-in 0s;
-            transition: all .3s ease-in 0s;
+  -webkit-transition: all .3s ease-in 0s;
+  -moz-transition: all .3s ease-in 0s;
+  -ms-transition: all .3s ease-in 0s;
+  -o-transition: all .3s ease-in 0s;
+  transition: all .3s ease-in 0s;
 }
 
 iframe {
-    border: 0;
+  border: 0;
 }
 
 a, a:focus, a:hover {
-    text-decoration: none;
-    outline: 0;
+  text-decoration: none;
+  outline: 0;
 }
 
 a:focus, a:hover {
-    color: inherit;
+  color: inherit;
 }
 
 h1, h2, h3,
 h4, h5, h6 {
-    font-family: 'Open Sans', sans-serif;
-	font-weight: normal;
-	margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: normal;
+  margin: 0;
 }
 
 .clear:before,
 .clear:after {
-    content: " ";
-    display: table;
+  content: " ";
+  display: table;
 }
 
 .clear:after {
-   clear: both;
+  clear: both;
 }
 
 .clear {
-   *zoom: 1;
+  *zoom: 1;
 }
 
 body > section {
-    padding: 100px 0;
+  padding: 100px 0;
 }
 
 .section-title {
@@ -92,31 +92,31 @@ body > section {
 }
 
 .section-title h2:after {
-background: none repeat scroll 0 0 #fff;
-border: 1px solid #1F2021;
-border-radius: 25px;
-bottom: -6px;
-content: "";
-height: 11px;
-left: 50%;
-margin-left: -5.5px;
-position: absolute;
-width: 11px;
+  background: none repeat scroll 0 0 #fff;
+  border: 1px solid #1F2021;
+  border-radius: 25px;
+  bottom: -6px;
+  content: "";
+  height: 11px;
+  left: 50%;
+  margin-left: -5.5px;
+  position: absolute;
+  width: 11px;
 }
 
 .section-title p {
-    line-height: 25px;
-    font-weight: 300;
-    font-size: 13px;
+  line-height: 25px;
+  font-weight: 300;
+  font-size: 13px;
 }
 
 .btn {
-    border-radius: 0;
+  border-radius: 0;
 }
 
 .btn:hover,
 .btn:focus {
-    outline: 0;
+  outline: 0;
 }
 
 .btn-blue {
@@ -128,7 +128,7 @@ width: 11px;
 }
 
 .kill-margin {
-    margin: 0 !important;
+  margin: 0 !important;
 }
 
 /*************************
@@ -141,10 +141,10 @@ width: 11px;
 .navbar-nav > li > a,
 .search-form > #search-sub {
   -webkit-transition: all 0.6s ease;
-     -moz-transition: all 0.6s ease;
-      -ms-transition: all 0.6s ease;
-       -o-transition: all 0.6s ease;
-          transition: all 0.6s ease;
+  -moz-transition: all 0.6s ease;
+  -ms-transition: all 0.6s ease;
+  -o-transition: all 0.6s ease;
+  transition: all 0.6s ease;
 }
 
 .animated-nav .navbar-brand {
@@ -206,7 +206,7 @@ width: 11px;
 .search-form > #search {
   background-color: transparent;
   height: 40px;
-    border: 0 ;
+  border: 0 ;
   margin-top: 28px;
   width: 100%;
 }
@@ -224,7 +224,7 @@ width: 11px;
 }
 
 .animated-nav .search-form > #search-sub {
-    bottom: 22px;
+  bottom: 22px;
 }
 
 /*************************
@@ -290,25 +290,25 @@ width: 11px;
   z-index: 20;
   margin-top: -30px;
 
-    -webkit-transition: all 0.3s ease 0s;
-       -moz-transition: all 0.3s ease 0s;
-        -ms-transition: all 0.3s ease 0s;
-         -o-transition: all 0.3s ease 0s;
-            transition: all 0.3s ease 0s;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 
 #nav-arrows > a.sl-prev {
-    left: 50px;
+  left: 50px;
 }
 
 #nav-arrows > a.sl-next {
-    right: 50px;
+  right: 50px;
 }
 
 #nav-arrows > a.sl-next:hover {
-    background-color: #009EE3;
-    border-color: #009EE3;
-    color: #fff;
+  background-color: #009EE3;
+  border-color: #009EE3;
+  color: #fff;
 }
 
 .carousel-indicators .active {
@@ -318,36 +318,36 @@ width: 11px;
 
 
 /*============================================================
-    Services
+Services
 ============================================================*/
 
 #service .media > .pull-left{
-    /*margin-right: 50px;*/
+  /*margin-right: 50px;*/
 }
 
 #service .media .media-body h3{
-    color: #16a7d0;
-    font-weight: 400;
-    font-size: 20px;
-    margin-bottom: 15px;
+  color: #16a7d0;
+  font-weight: 400;
+  font-size: 20px;
+  margin-bottom: 15px;
 }
 
 #service .media .media-body p{
-    color: #A8A8A8;
-    font-size: 13px;
-    line-height: 24px;
+  color: #A8A8A8;
+  font-size: 13px;
+  line-height: 24px;
 }
 
 #service .media{
-    padding-bottom: 50px;
-    padding-left: 20px;
+  padding-bottom: 50px;
+  padding-left: 20px;
 }
 
 
 
 
 .service-item {
-    margin-bottom: 70px;
+  margin-bottom: 70px;
 }
 
 .service-icon {
@@ -356,7 +356,7 @@ width: 11px;
 }
 
 .service-desc {
-    margin-left: 115px;
+  margin-left: 115px;
 }
 
 .service-item h3 {
@@ -371,7 +371,7 @@ width: 11px;
 
 
 /*============================================================
-    Service Bottom
+Service Bottom
 ============================================================*/
 
 #service-bottom {
@@ -429,21 +429,21 @@ width: 11px;
 }
 
 .thumbnail {
-    background-color: #0f748f;
-    border-color: #0f748f;
-    color: white;
+  background-color: #0f748f;
+  border-color: #0f748f;
+  color: white;
 }
 
 .thumbnail .caption > p {
-    color: white;
+  color: white;
 }
 
 /*============================================================
-    Portfolio
+Portfolio
 ============================================================*/
 
 #projects {
-    width: 100%;
+  width: 100%;
 }
 
 .project-filter {
@@ -464,20 +464,20 @@ width: 11px;
 
 .project-filter ul li a:hover,
 .project-filter ul li a.active {
-    background-color: #16a7d0;
-    color: #fff;
+  background-color: #16a7d0;
+  color: #fff;
 }
 
 .mix {
-    display: none;
+  display: none;
 }
 
 .portfolio-item {
-    position: relative;
-    float: left;
-    overflow: hidden;
-    width: 25%;
-    /*max-height: 228px;*/
+  position: relative;
+  float: left;
+  overflow: hidden;
+  width: 25%;
+  /*max-height: 228px;*/
 }
 
 .plus {
@@ -491,11 +491,11 @@ width: 11px;
   top: -41px;
   width: 80px;
 
-    -webkit-transition: 0.3s ease-out 0s;
-       -moz-transition: 0.3s ease-out 0s;
-        -ms-transition: 0.3s ease-out 0s;
-         -o-transition: 0.3s ease-out 0s;
-            transition: 0.3s ease-out 0s;
+  -webkit-transition: 0.3s ease-out 0s;
+  -moz-transition: 0.3s ease-out 0s;
+  -ms-transition: 0.3s ease-out 0s;
+  -o-transition: 0.3s ease-out 0s;
+  transition: 0.3s ease-out 0s;
 }
 
 figcaption.mask {
@@ -506,26 +506,26 @@ figcaption.mask {
   position: absolute;
   width: 100%;
 
-    -webkit-transition: 0.3s ease-out 0s;
-       -moz-transition: 0.3s ease-out 0s;
-        -ms-transition: 0.3s ease-out 0s;
-         -o-transition: 0.3s ease-out 0s;
-            transition: 0.3s ease-out 0s;
+  -webkit-transition: 0.3s ease-out 0s;
+  -moz-transition: 0.3s ease-out 0s;
+  -ms-transition: 0.3s ease-out 0s;
+  -o-transition: 0.3s ease-out 0s;
+  transition: 0.3s ease-out 0s;
 }
 
 .portfolio-item:hover figcaption.mask {
-    bottom: 0;
+  bottom: 0;
 }
 
 .portfolio-item:hover .plus {
-    top: 30%;
+  top: 30%;
 }
 
 /*============================================================
-    OTROS PRODUCTOS
+OTROS PRODUCTOS
 ============================================================*/
 #productos2 {
-    background-color: #1F2021;
+  background-color: #1F2021;
 }
 
 .portfolio-item2 {
@@ -594,11 +594,11 @@ figcaption.mask span {
 
 
 /*============================================================
-    About Us
+About Us
 ============================================================*/
 
 #about {
-    padding-bottom: 0;
+  padding-bottom: 0;
 }
 
 .about-us img {
@@ -669,7 +669,7 @@ figcaption.mask span {
 
 
 /*============================================================
-    About Us
+About Us
 ============================================================*/
 
 .subtitle {
@@ -764,10 +764,10 @@ figcaption.mask span {
   background-color: #16a7d0;
 
   -webkit-transition: width 0.6s ease;
-     -moz-transition: width 0.6s ease;
-      -ms-transition: width 0.6s ease;
-       -o-transition: width 0.6s ease;
-          transition: width 0.6s ease;
+  -moz-transition: width 0.6s ease;
+  -ms-transition: width 0.6s ease;
+  -o-transition: width 0.6s ease;
+  transition: width 0.6s ease;
 }
 
 
@@ -775,10 +775,10 @@ figcaption.mask span {
 
 .progress.active .bar {
   -webkit-animation: progress-bar-stripes 2s linear infinite;
-     -moz-animation: progress-bar-stripes 2s linear infinite;
-      -ms-animation: progress-bar-stripes 2s linear infinite;
-       -o-animation: progress-bar-stripes 2s linear infinite;
-          animation: progress-bar-stripes 2s linear infinite;
+  -moz-animation: progress-bar-stripes 2s linear infinite;
+  -ms-animation: progress-bar-stripes 2s linear infinite;
+  -o-animation: progress-bar-stripes 2s linear infinite;
+  animation: progress-bar-stripes 2s linear infinite;
 }
 
 .progress-success .bar, .progress-green .bar {
@@ -789,31 +789,31 @@ figcaption.mask span {
 
 
 /*=================================
-    Quotes
+Quotes
 ===================================*/
 
 #quotes {
-    background-color: #1F2021;
+  background-color: #1F2021;
 }
 
 .call-to-action {
-    color: #fff;
-    font-weight: 600;
+  color: #fff;
+  font-weight: 600;
 }
 
 .call-to-action p {
-    font-size: 25px;
-    line-height: 35px;
-    margin-bottom: 15px;
+  font-size: 25px;
+  line-height: 35px;
+  margin-bottom: 15px;
 }
 
 .logo-quote {
-    width: 200px;
+  width: 200px;
 }
 
 
 /*============================================================
-    Pricing
+Pricing
 ============================================================*/
 
 .pricing-table {
@@ -888,18 +888,18 @@ figcaption.mask span {
 }
 
 .special-plan {
-    margin-top: 100px;
+  margin-top: 100px;
 }
 
 .special-plan p {
-    font-size: 20px;
-    margin-bottom: 35px;
-    color: #1f2021;
+  font-size: 20px;
+  margin-bottom: 35px;
+  color: #1f2021;
 }
 
 
 /*============================================================
-    Media Queries
+Media Queries
 ============================================================*/
 
 #subscribe {
@@ -940,7 +940,7 @@ figcaption.mask span {
 
 
 /*============================================================
-    Contact Us
+Contact Us
 ============================================================*/
 
 .contact-form .input-field {
@@ -999,7 +999,7 @@ figcaption.mask span {
 }
 
 /*============================================================
-    Catalogo
+Catalogo
 ============================================================*/
 .navbar-fixed-top-static{
 
@@ -1024,31 +1024,44 @@ figcaption.mask span {
   border: 2px solid lightblue;
 }
 
+.media {
+  border: 1px lightgrey solid;
+  border-radius: 6px;
+  padding: 3px;
+}
+
+.media img {
+  border-radius: 2px;
+}
+
+.media-body {
+  color:black;
+}
 
 /*============================================================
-    Footer
+Footer
 ============================================================*/
 
 #footer {
-    background-color: #121116;
-    padding: 115px 0 35px;
+  background-color: #121116;
+  padding: 115px 0 35px;
 }
 
 .footer-logo {
-    margin-bottom: 45px;
+  margin-bottom: 45px;
 }
 
 .footer-social {
-    margin-bottom: 85px;
+  margin-bottom: 85px;
 }
 
 .footer-social h3 {
-    font-size: 20px;
-    color: #fff;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-    padding-bottom: 20px;
-    position: relative;
+  font-size: 20px;
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
 }
 
 .footer-social h3:after {
@@ -1073,17 +1086,17 @@ figcaption.mask span {
 }
 
 .copyright {
-    font-size: 15px;
-    font-weight: 600;
-    color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
 }
 
 .copyright a {
-    color: #16a7d0;
+  color: #16a7d0;
 }
 
 .copyright a:hover {
-    color: #fff;
+  color: #fff;
 }
 
 .copyright p {
@@ -1091,5 +1104,5 @@ figcaption.mask span {
 }
 
 .copyright p:first-child {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }

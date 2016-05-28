@@ -5,82 +5,108 @@ $(function(){
   jQuery("#navigation").addClass("animated-nav");
 
   $('.panel-heading a').click(function() {
-      $('.panel-heading').removeClass('actives');
-      $(this).parents('.panel-heading').addClass('actives');
+    $('.panel-heading').removeClass('actives');
+    $(this).parents('.panel-heading').addClass('actives');
 
-      $('.panel-title').removeClass('actives'); //just to make a visual sense
-      $(this).parent().addClass('actives'); //just to make a visual sense
+    $('.panel-title').removeClass('actives'); //just to make a visual sense
+    $(this).parent().addClass('actives'); //just to make a visual sense
 
-      alert($(this).parents('.panel-heading').attr('class'));
-   });
+    alert($(this).parents('.panel-heading').attr('class'));
+  });
 
 });
 
 angular
-  .module('catalogoApp', [])
-  .config(function () {
+.module('catalogoApp', [])
+.config(function () {})
+.controller('MainCtrl', ['$scope','$filter', 'productsFactory', function ($scope, $filter, productsFactory) {
 
-  })
-  .controller('MainCtrl', ['$scope', 'productsFactory', function ($scope, productsFactory) {
+  $scope.categories = [
+    {id: 1, name: 'accesorios' , subcategories : [] },
+    {id: 2, name: 'nautica'    , subcategories : [] },
+    {id: 3, name: 'trailers'   , subcategories : [] }
+  ];
 
-    $scope.categories = [
-      {id: 1, name: 'Accesorios' , subcategories : ['Todos'] },
-      {id: 2, name: 'Náutica'    , subcategories : ['Todos', 'Remos', 'Kayaks'] },
-      {id: 3, name: 'Trailers'   , subcategories : ['Todos', 'Mediano', 'Pequeño'] }];
+  /**
+   *  Angular scope variable for filtering by category.
+   */
+  $scope.categoryFilter = '';
 
-    var onInit = function () {
-      $scope.loadProducts();
-    };
-    /*
-    $scope.toggleShowOlapicModal = function (media) {
-      $scope.mediaModal = media;
-      $scope.showOlapicModal = true;
-    };
 
-    $scope.toggleHideOlapicModal = function () {
-      $scope.showOlapicModal = false;
-    };
-    */
+  /**
+   * anonymous function - run then init the controller
+   *
+   * @return {type}  nothing ...
+   */
+  var onInit = function () {
+    $scope.loadProducts();
+  };
 
-    // GET data from Olapic API
-    $scope.loadProducts = function() {
-      if(!$scope.inProgress){
-        $scope.inProgress = true;
 
-        productsFactory.getProducts().then(function(result) {
-          $scope.products = result.data;
-          console.log(result);
-          $scope.inProgress = false;
-        }, function(error){
-          console.log('error');
-          $scope.showError = true;
+  function getCategoryByName(name) {
+    return $filter('filter')($scope.categories, function(d) {return d.name === name;});
+  }
+
+  $scope.changeCategory = function (name) {
+    $scope.categoryFilter = name;
+  }
+
+  /*
+  $scope.subcategories = function () {
+    for(var i = 0; i < $scope.products; i++) {
+    }
+  }
+
+  $scope.toggleShowOlapicModal = function (media) {
+  $scope.mediaModal = media;
+  $scope.showOlapicModal = true;
+  };
+
+  $scope.toggleHideOlapicModal = function () {
+  $scope.showOlapicModal = false;
+  };
+  */
+
+  // GET data from Olapic API
+  $scope.loadProducts = function() {
+    if(!$scope.inProgress){
+      $scope.inProgress = true;
+
+      productsFactory.getProducts().then(function(result) {
+        $scope.products = result.data;
+        console.log(getCategoryByName('accesorios'));
+        console.log(result);
+        $scope.inProgress = false;
+      }, function(error){
+        console.log('error');
+        $scope.showError = true;
+      });
+    }
+  };
+
+  onInit();
+
+}])
+.factory('productsFactory', ['$http', function ($http) {
+  var url = 'http://outworktime.com/updateproducts.php';
+
+  return {
+    getProducts: function () {
+      return $http.get(url);
+    }
+  };
+
+}])
+.directive('checkImage', function($http) {
+  return {
+    restrict: 'A',
+    link: function(scope, element, attrs) {
+      attrs.$observe('ngSrc', function(ngSrc) {
+        $http.get(ngSrc).success(function(){
+        }).error(function(){
+          element.attr('src', 'img/catalogo/noimage.jpg'); // set default image
         });
-      }
-    };
-
-    onInit();
-
-  }])
-  .factory('productsFactory', ['$http', function ($http) {
-wwwwww    var url = 'http://outworktime.com/updateproducts.php';
-
-    return {
-      getProducts: function () {
-        return $http.get(url);
-      }
-    };
-
-  }])
-  .directive('checkImage', function($http) {
-    return {
-        restrict: 'A',
-        link: function(scope, element, attrs) {
-            attrs.$observe('ngSrc', function(ngSrc) {
-                $http.get(ngSrc).success(function(){
-                }).error(function(){
-                    element.attr('src', 'img/catalogo/noimage.jpg'); // set default image
-                });
-            });
-        }
-    };
+      });
+    }
+  };
 });
