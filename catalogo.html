@@ -91,8 +91,12 @@
 
       <!-- BEGIN MAIN-->
       <div class="col-md-9" >
+        <dir-pagination-controls></dir-pagination-controls>
         <!-- BEGIN MEDIA UNIT -->
-        <div class="media" ng-repeat="product in products | filter: (!!categoryFilter || undefined) && {'categoria': categoryFilter}">
+        <!-- <div class="media" ng-repeat="product in products | filter: (!!categoryFilter || undefined) && {'categoria': categoryFilter}"> -->
+        <div class="media" dir-paginate="product in products |
+            filter : (!!categoryFilter || undefined) && { 'categoria': categoryFilter } |
+            itemsPerPage: 10 ">
           <div class="media-left media-middle">
             <a href="#">
               <!-- <img class="media-object" ng-src="img/catalogo/{{product.imagen1 || 'noimage'}}.jpg" alt="..." style="width:100px;height:100px"> -->
@@ -174,6 +178,7 @@
   <!-- theme custom scripts -->
   <script src="js/app/catalogoApp.js"></script>
   <script src="js/app/directives/menu.js"></script>
+  <script src="js/app/directives/paginator/dirPagination.js"></script>
 
 </body>
 </html>

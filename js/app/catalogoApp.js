@@ -17,7 +17,7 @@ $(function(){
 });
 
 angular
-.module('catalogoApp', [])
+.module('catalogoApp', ['angularUtils.directives.dirPagination'])
 .config(function () {})
 .controller('MainCtrl', ['$scope','$filter', 'productsFactory', function ($scope, $filter, productsFactory) {
 
@@ -49,6 +49,7 @@ angular
 
   $scope.changeCategory = function (name) {
     $scope.categoryFilter = name;
+    //$scope.products = $filter('filter')($scope.products, function(d) {return d.categoria === name;});
   }
 
   /*
@@ -74,8 +75,7 @@ angular
 
       productsFactory.getProducts().then(function(result) {
         $scope.products = result.data;
-        console.log(getCategoryByName('accesorios'));
-        console.log(result);
+        //console.log(result);
         $scope.inProgress = false;
       }, function(error){
         console.log('error');
