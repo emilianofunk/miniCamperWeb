@@ -1,184 +1,202 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta name=”robots” content=”noindex, nofollow”>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>OutworkTime</title>
+    <meta name=”robots” content=”noindex, nofollow”>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OutworkTime</title>
 
-  <!--
-  Google Fonts
-  ============================================= -->
-  <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700" rel="stylesheet" type="text/css">
+    <!--
+    Google Fonts
+    ============================================= -->
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700" rel="stylesheet" type="text/css">
 
-  <!--
-  CSS
-  ============================================= -->
-  <!-- Fontawesome -->
-  <link rel="stylesheet" href="css/font-awesome.min.css">
-  <!-- Bootstrap -->
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <!-- Fancybox -->
-  <link rel="stylesheet" href="css/jquery.fancybox.css">
-  <!-- owl carousel -->
-  <link rel="stylesheet" href="css/owl.carousel.css">
-  <!-- Animate -->
-  <link rel="stylesheet" href="css/animate.css">
-  <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="css/main.css">
-  <!-- Main Responsive -->
-  <link rel="stylesheet" href="css/responsive.css">
+    <!--
+    CSS
+    ============================================= -->
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Fancybox -->
+    <link rel="stylesheet" href="css/jquery.fancybox.css">
+    <!-- owl carousel -->
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <!-- Animate -->
+    <link rel="stylesheet" href="css/animate.css">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- Main Responsive -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/responsive.css">
 
-  <!-- Modernizer Script for old Browsers -->
-  <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+
+    <!-- Modernizer Script for old Browsers -->
+    <script src="js/vendor/modernizr-2.6.2.min.js"></script>
 </head>
 <body>
 
-  <!--
-  Fixed Navigation
-  ==================================== -->
-  <header id="navigation" class="navbar-fixed-top">
+<!--
+Fixed Navigation
+==================================== -->
+<header id="navigation" class="navbar-fixed-top">
     <div class="container">
-      <div class="navbar-header">
-        <!-- responsive nav button -->
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <!-- /responsive nav button -->
-        <!-- logo -->
-        <h1 class="navbar-brand" >
-          <a href="#body">
-            <img src="img/logo.png" alt="Kasper Logo" style="height:37px">
-          </a>
-        </h1>
-        <!-- /logo -->
-      </div>
-      <!-- main nav -->
-      <nav class="collapse navigation navbar-collapse navbar-right" role="navigation">
-        <ul id="nav" class="nav navbar-nav">
-          <li class="current"><a href="#home">Home</a></li>
-          <li><a href="#productos">Nuestros productos</a></li>
-          <li><a href="#catalogo">Catálogo</a></li>
-          <li><a href="#acercade">Acerca de</a></li>
-          <li><a href="#contact">Contacto</a></li>
-        </ul>
-      </nav>
-      <!-- /main nav -->
-    </div>
-  </header>
-  <!--
-  End Fixed Navigation
-  ==================================== -->
-  <!--
-  BEGIN CONTENT
-  ==================================== -->
-
-
-
-  <!--
-  Home Slider
-  ==================================== -->
-  <section id="home" class="container-catalog"ng-app="catalogoApp">
-    <div class="" ng-controller="MainCtrl">
-      <!-- BEGIN ASIDE -->
-      <div class="col-md-3">
-        <menu-accordion> </menu-accordion>
-      </div>
-
-      <!-- BEGIN MAIN-->
-      <div class="col-md-9" >
-        <dir-pagination-controls></dir-pagination-controls>
-        <!-- BEGIN MEDIA UNIT -->
-        <!-- <div class="media" ng-repeat="product in products | filter: (!!categoryFilter || undefined) && {'categoria': categoryFilter}"> -->
-        <div class="media" dir-paginate="product in products |
-            filter : (!!categoryFilter || undefined) && { 'categoria': categoryFilter } |
-            itemsPerPage: 10 ">
-          <div class="media-left media-middle">
-            <a href="#">
-              <!-- <img class="media-object" ng-src="img/catalogo/{{product.imagen1 || 'noimage'}}.jpg" alt="..." style="width:100px;height:100px"> -->
-              <img check-image ng-src="img/catalogo/{{product.imagen1}}.jpg" alt="Image" style="width:100px;height:100px"  >
-            </a>
-          </div>
-          <div class="media-body">
-            <h4 class="media-heading">{{product.titulo}}</h4>
-            {{product.descripcion}}
-          </div>
+        <div class="navbar-header">
+            <!-- responsive nav button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <!-- /responsive nav button -->
+            <!-- logo -->
+            <h1 class="navbar-brand" >
+                <a href="#body">
+                    <img src="img/logo.png" alt="Kasper Logo" style="height:37px">
+                </a>
+            </h1>
+            <!-- /logo -->
         </div>
-      </div>
-    </div>
-  </section>
-  <!--
-  End #home Slider
-  ========================== -->
-
-
-
-  <!--
-  END CONTENT
-  ==================================== -->
-  <!--
-  #footer
-  ========================== -->
-  <footer id="footer" class="text-center">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="footer-logo wow fadeInDown">
-            <img src="img/logo.png" alt="logo" style="background-color: white; border-radius: 32px; padding: 28px;">
-          </div>
-          <div class="footer-social wow fadeInUp">
-            <h3>We are social</h3>
-            <ul class="text-center list-inline">
-              <li><a href="http://goo.gl/RqhEjP"><i class="fa fa-facebook fa-lg"></i></a></li>
-              <li><a href="http://goo.gl/hUfpSB"><i class="fa fa-twitter fa-lg"></i></a></li>
-              <li><a href="http://goo.gl/r4xzR4"><i class="fa fa-google-plus fa-lg"></i></a></li>
-              <li><a href="http://goo.gl/k9zAy5"><i class="fa fa-dribbble fa-lg"></i></a></li>
+        <!-- main nav -->
+        <nav class="collapse navigation navbar-collapse navbar-right" role="navigation">
+            <ul id="nav" class="nav navbar-nav">
+                <li class="current"><a href="#home">Home</a></li>
+                <li><a href="#productos">Nuestros productos</a></li>
+                <li><a href="#catalogo">Catálogo</a></li>
+                <li><a href="#acercade">Acerca de</a></li>
+                <li><a href="#contact">Contacto</a></li>
             </ul>
-          </div>
-          <div class="copyright">
-
-            <p>
-              Theme by <a href="http://graphberry.com">GraphBerry.com</a> Developed by <a target="_blank" href="http://www.themefisher.com">Themefisher</a>
-            </p>
-          </div>
-        </div>
-      </div>
+        </nav>
+        <!-- /main nav -->
     </div>
-  </footer>
-  <!--
-  End #footer
-  ========================== -->
-  <!--
-  JavaScripts
-  ========================== -->
-  <!-- main jQuery -->
-  <script src="js/vendor/jquery-1.11.1.min.js"></script>
-  <!-- Bootstrap -->
-  <script src="js/bootstrap.min.js"></script>
-  <!-- jquery.nav -->
-  <script src="js/jquery.nav.js"></script>
-  <!-- Portfolio Filtering
-  <script src="js/jquery.mixitup.min.js"></script> -->
-  <!-- Fancybox
-  <script src="js/jquery.fancybox.pack.js"></script> -->
-  <!-- Parallax sections -->
-  <script src="js/jquery.parallax-1.1.3.js"></script>
-  <!-- jQuery Appear -->
-  <script src="js/jquery.appear.js"></script>
-  <!-- countTo
-  <script src="js/jquery-countTo.js"></script> -->
-  <!-- owl carousel
-  <script src="js/owl.carousel.min.js"></script> -->
-  <!-- Angular script -->
-  <script src="js/angular.min.js"></script>
-  <!-- theme custom scripts -->
-  <script src="js/app/catalogoApp.js"></script>
-  <script src="js/app/directives/menu.js"></script>
-  <script src="js/app/directives/paginator/dirPagination.js"></script>
+</header>
+<!--
+End Fixed Navigation
+==================================== -->
+<!--
+BEGIN CONTENT
+==================================== -->
+
+
+
+<!--
+Home Slider
+==================================== -->
+<section id="home" class="container-catalog"ng-app="catalogoApp">
+    <div class="" ng-controller="MainCtrl">
+        <!-- BEGIN ASIDE -->
+        <div class="col-md-3">
+            <menu-accordion> </menu-accordion>
+        </div>
+
+        <!-- BEGIN MAIN-->
+        <div class="col-md-9" >
+            <div class="loading-spiner-holder" loading>
+                <div class="loading-spiner">
+                    <div class="panel panel-loading">
+                        <h3>CARGANDO ...  </h3>
+                        <i class="fa fa-spinner fa-spin fa-3x" aria-hidden="true">
+                        </i>
+                    </div>
+                </div>
+            </div>
+            <!-- BEGIN MEDIA UNIT -->
+            <!-- <div class="media" ng-repeat="product in products | filter: (!!categoryFilter || undefined) && {'categoria': categoryFilter}"> -->
+            <div class="media" dir-paginate="product in products |
+            filter : (!!categoryFilter || undefined) && { 'categoria': categoryFilter } |
+            filter : (!!subcategoryFilter || undefined) && { 'subcategoria': subcategoryFilter } |
+            itemsPerPage: 10 ">
+
+                <div class="media-left media-middle">
+                    <a href="#">
+                        <!-- <img class="media-object" ng-src="img/catalogo/{{product.imagen1 || 'noimage'}}.jpg" alt="..." style="width:100px;height:100px"> -->
+                        <img check-image ng-src="img/catalogo/{{product.imagen1}}.jpg" alt="Image" style="width:150px;height:140px"  >
+                    </a>
+                </div>
+                <div class="media-body">
+                    <h4 class="media-heading">{{product.titulo}}</h4>
+                    <p>{{product.descripcion}}</p>
+
+                </div>
+                <div class="label label-primary label-price">
+                    PRECIO: {{product.precio}}
+                </div>
+            </div>
+            <dir-pagination-controls></dir-pagination-controls>
+        </div>
+    </div>
+
+</section>
+<!--
+End #home Slider
+========================== -->
+
+
+
+<!--
+END CONTENT
+==================================== -->
+<!--
+#footer
+========================== -->
+<footer id="footer" class="text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="footer-logo wow fadeInDown">
+                    <img src="img/logo.png" alt="logo" style="background-color: white; border-radius: 32px; padding: 28px;">
+                </div>
+                <div class="footer-social wow fadeInUp">
+                    <h3>Viviendo la naturaleza junto a vos</h3>
+                    <ul class="text-center list-inline">
+                        <li><a href="http://goo.gl/RqhEjP"><i class="fa fa-facebook fa-lg"></i></a></li>
+                        <li><a href="http://goo.gl/hUfpSB"><i class="fa fa-twitter fa-lg"></i></a></li>
+                        <li><a href="http://goo.gl/r4xzR4"><i class="fa fa-google-plus fa-lg"></i></a></li>
+                        <li><a href="http://goo.gl/k9zAy5"><i class="fa fa-dribbble fa-lg"></i></a></li>
+                    </ul>
+                </div>
+                <div class="copyright">
+                    <p>
+                        Theme by <a href="http://graphberry.com">GraphBerry.com</a> Developed by <a target="_blank" href="http://www.themefisher.com">Themefisher</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!--
+End #footer
+========================== -->
+<!--
+JavaScripts
+========================== -->
+<!-- main jQuery -->
+<script src="js/vendor/jquery-1.11.1.min.js"></script>
+<!-- Bootstrap -->
+<script src="js/bootstrap.min.js"></script>
+<!-- jquery.nav -->
+<script src="js/jquery.nav.js"></script>
+<!-- Portfolio Filtering
+<script src="js/jquery.mixitup.min.js"></script> -->
+<!-- Fancybox
+<script src="js/jquery.fancybox.pack.js"></script> -->
+<!-- Parallax sections -->
+<script src="js/jquery.parallax-1.1.3.js"></script>
+<!-- jQuery Appear -->
+<script src="js/jquery.appear.js"></script>
+<!-- countTo
+<script src="js/jquery-countTo.js"></script> -->
+<!-- owl carousel
+<script src="js/owl.carousel.min.js"></script> -->
+<!-- Angular script -->
+<script src="js/angular.min.js"></script>
+<!-- theme custom scripts -->
+<script src="js/app/catalogoApp.js"></script>
+<script src="js/app/directives/menu.js"></script>
+<script src="js/app/directives/paginator/dirPagination.js"></script>
 
 </body>
 </html>
