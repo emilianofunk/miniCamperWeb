@@ -63,11 +63,8 @@ Fixed Navigation
         <!-- main nav -->
         <nav class="collapse navigation navbar-collapse navbar-right" role="navigation">
             <ul id="nav" class="nav navbar-nav">
-                <li class="current"><a href="#home">Home</a></li>
-                <li><a href="#productos">Nuestros productos</a></li>
-                <li><a href="#catalogo">Catálogo</a></li>
-                <li><a href="#acercade">Acerca de</a></li>
-                <li><a href="#contact">Contacto</a></li>
+                <li><a href="/index-s">Home</a></li>
+                <li class="current" ><a href="#catalogo">Catálogo</a></li>
             </ul>
         </nav>
         <!-- /main nav -->
@@ -80,13 +77,13 @@ End Fixed Navigation
 BEGIN CONTENT
 ==================================== -->
 
-
-
 <!--
 Home Slider
 ==================================== -->
 <section id="home" class="container-catalog"ng-app="catalogoApp">
     <div class="" ng-controller="MainCtrl">
+
+
         <!-- BEGIN ASIDE -->
         <div class="col-md-3">
             <menu-accordion> </menu-accordion>
@@ -94,6 +91,10 @@ Home Slider
 
         <!-- BEGIN MAIN-->
         <div class="col-md-9" >
+            <ol class="breadcrumb">
+                <li><a href="#"></a>{{categoryFilter}}</li>
+                <li><a href="#"></a>{{subcategoryFilter}}</li>
+            </ol>
             <div class="loading-spiner-holder" loading>
                 <div class="loading-spiner">
                     <div class="panel panel-loading">
@@ -103,22 +104,25 @@ Home Slider
                     </div>
                 </div>
             </div>
+            <div class="gallery-modal-background" ng-click="hideGalleryModal()" ng-if="galleryModalShow">
+                <i class="fa fa-times fa-2x btn-close" aria-hidden="true" ng-click="hideGalleryModal()" ></i>
+            </div>
+            <image-modal ng-if="galleryModalShow" product="productModal" action="hideGalleryModal()"></image-modal>
             <!-- BEGIN MEDIA UNIT -->
-            <!-- <div class="media" ng-repeat="product in products | filter: (!!categoryFilter || undefined) && {'categoria': categoryFilter}"> -->
-            <div class="media" dir-paginate="product in products |
+            <div class="media media-catalog" dir-paginate="product in products |
             filter : (!!categoryFilter || undefined) && { 'categoria': categoryFilter } |
-            filter : (!!subcategoryFilter || undefined) && { 'subcategoria': subcategoryFilter } |
+            filter : (!!subcategoryFilter || undefined && subcategoryFilter !== 'TODOS') && { 'subcategoria': subcategoryFilter } |
             itemsPerPage: 10 ">
 
-                <div class="media-left media-middle">
+                <div class="media-left media-middle" ng-click="showGalleryModal(product)">
                     <a href="#">
-                        <!-- <img class="media-object" ng-src="img/catalogo/{{product.imagen1 || 'noimage'}}.jpg" alt="..." style="width:100px;height:100px"> -->
-                        <img check-image ng-src="img/catalogo/{{product.imagen1}}.jpg" alt="Image" style="width:150px;height:140px"  >
+                        <img check-image ng-src="img/catalogo/{{product.imagen1}}.jpg" alt="Image" style="width:150px;height:140px;border-bottom-left-radius:0;border-bottom-right-radius:0;"  >
                     </a>
                 </div>
                 <div class="media-body">
-                    <h4 class="media-heading">{{product.titulo}}</h4>
+                    <h4 class="media-heading" ng-click="showGalleryModal(product)">{{product.titulo}}</h4>
                     <p>{{product.descripcion}}</p>
+                    <a ng-click="showGalleryModal(product)" href="">Ver más + </a>
 
                 </div>
                 <div class="label label-primary label-price">
@@ -195,7 +199,7 @@ JavaScripts
 <script src="js/angular.min.js"></script>
 <!-- theme custom scripts -->
 <script src="js/app/catalogoApp.js"></script>
-<script src="js/app/directives/menu.js"></script>
+<script src="js/app/directives/menu/menu.js"></script>
 <script src="js/app/directives/paginator/dirPagination.js"></script>
 
 </body>

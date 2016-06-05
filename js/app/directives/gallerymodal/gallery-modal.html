@@ -1,0 +1,28 @@
+<div class="gallery-modal-container">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h2 class="panel-title" style="font-size: 24px;">{{product.titulo}}</h2>
+        </div>
+        <div class="panel-body">
+            <!--<img ng-src="img/catalogo/{{product.imagen1}}.jpg" alt="Image" class="modal-img-preview""  >-->
+            <img check-image ng-src="img/catalogo/{{product.imagen1}}.jpg" alt="Image" class="modal-img-preview">
+            <br>
+        </div>
+        <hr>
+        <div class="panel-body">
+            <h3>Descripcion</h3>
+            <br>
+            <p>{{product.descripcion}}</p>
+        </div>
+        <hr>
+        <div class="panel-body">
+            <h3>Especificaciones</h3>
+            <br>
+            <ul class="list-group">
+                <li class="list-group-item" ng-repeat="spec in product.tecnica">{{spec}}</li>
+            </ul>
+            <br>
+            <p class="bg-primary bg-price">PRECIO: {{product.precio}}</p>
+        </div>
+    </div>
+</div>

@@ -22,9 +22,9 @@ angular
     .controller('MainCtrl', ['$scope','$filter', 'productsFactory', function ($scope, $filter, productsFactory) {
 
         $scope.categories = [
-            {id: 1, name: 'accesorios' , subcategories : ['todos'] },
-            {id: 2, name: 'nautica'    , subcategories : ['todos'] },
-            {id: 3, name: 'trailers'   , subcategories : ['todos'] }
+            {id: 1, name: 'accesorios' , subcategories : ['TODOS'] },
+            {id: 2, name: 'nautica'    , subcategories : ['TODOS'] },
+            {id: 3, name: 'trailers'   , subcategories : ['TODOS'] }
         ];
 
         $scope.subCategories = [];
@@ -32,8 +32,8 @@ angular
         /**
          *  Angular scope variable for filtering by category and subcategories.
          */
-        $scope.categoryFilter = '';
-        $scope.subcategoryFilter = '';
+        $scope.categoryFilter = 'accesorios';
+        $scope.subcategoryFilter = 'TODOS';
 
         /**
          * anonymous function - run then init the controller
@@ -46,6 +46,16 @@ angular
 
         function getCategoryByName(name) {
             return $filter('filter')($scope.categories, function(d) {return d.name === name;});
+        }
+
+        function formatSpecs(specs) {
+            var a = specs.split(/@/);
+            console.log(a);
+
+            for(var i = 0; i < a.length; i++) {
+                a[i].replace(/@/,'');
+            }
+            return a;
         }
 
         $scope.getSubCategories = function () {
@@ -75,27 +85,25 @@ angular
 
         $scope.changeCategory = function (category) {
             $scope.categoryFilter = category;
+            $scope.subcategoryFilter = 'TODOS';
         }
 
         $scope.changeSubCategory = function (category, subcategory) {
             $scope.categoryFilter = category;
-            if(subcategory !== 'todos'){
-                $scope.subcategoryFilter = subcategory;
-            } else {
-                $scope.subcategoryFilter = '';
-            }
+            $scope.subcategoryFilter = subcategory;
         }
 
-        /*
-         $scope.toggleShowOlapicModal = function (media) {
-         $scope.mediaModal = media;
-         $scope.showOlapicModal = true;
-         };
+        $scope.showGalleryModal = function (product) {
+            if(typeof product.tecnica !== 'object') {
+                product.tecnica = formatSpecs(product.tecnica);
+            }
+            $scope.productModal = product;
+            $scope.galleryModalShow = true;
+        };
 
-         $scope.toggleHideOlapicModal = function () {
-         $scope.showOlapicModal = false;
-         };
-         */
+        $scope.hideGalleryModal = function () {
+            $scope.galleryModalShow = false;
+        };
 
         // GET data from Olapic API
         $scope.loadProducts = function() {
@@ -162,4 +170,13 @@ angular
             }
         };
 
-    }]);
+    }])
+    .directive('imageModal', function() {
+        return {
+            restrict: 'E',
+            scope : {
+                product: '='
+            },
+            templateUrl: 'js/app/directives/gallerymodal/gallery-modal.html'
+        };
+    });

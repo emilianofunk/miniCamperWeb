@@ -12,6 +12,6 @@ angular.module('catalogoApp')
 .directive('menuAccordion', function() {
   return {
     restrict: 'E',
-    templateUrl: 'js/app/directives/menu.html'
+    templateUrl: 'js/app/directives/menu/menu.html'
   };
 });
