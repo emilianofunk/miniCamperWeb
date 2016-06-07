@@ -1,16 +1,16 @@
 <div class="panel-group" ng-repeat="category in categories">
-  <div class="panel panel-default">
-    <div class="panel-heading" ng-click="changeCategory(category.name)">
-      <h4 class="panel-title" >
-        <a data-toggle="collapse" href="#collapse{{category.id}}">{{category.name}}</a>
-      </h4>
+    <div class="panel panel-default">
+        <div class="panel-heading" ng-click="changeCategory(category.name)">
+            <h4 class="panel-title" >
+                <a data-toggle="collapse" href="#collapse{{category.id}}">{{category.name}}</a>
+            </h4>
+        </div>
+        <div id="collapse{{category.id}}" class="panel-collapse collapse">
+            <ul class="list-group" >
+                <li class="list-group-item" ng-repeat="subcategory in category.subcategories">
+                    <a href="#" ng-click="changeSubCategory(category.name, subcategory)">{{subcategory}}</a></li>
+            </ul>
+            <!-- <div class="panel-footer">Footer</div> -->
+        </div>
     </div>
-    <div id="collapse{{category.id}}" class="panel-collapse collapse">
-      <ul class="list-group" >
-        <li class="list-group-item" ng-repeat="subcategory in category.subcategories">
-          <a href="#" ng-click="changeSubCategory(category.name, subcategory)">{{subcategory}}</a></li>
-      </ul>
-      <!-- <div class="panel-footer">Footer</div> -->
-    </div>
-  </div>
 </div>

@@ -4,7 +4,12 @@
             <h2 class="panel-title" style="font-size: 24px;">{{product.titulo}}</h2>
         </div>
         <div class="panel-body">
-            <!--<img ng-src="img/catalogo/{{product.imagen1}}.jpg" alt="Image" class="modal-img-preview""  >-->
+            <div class="loading-spiner-holder" loading>
+                <div class="loading-spiner">
+                    <i class="fa fa-spinner fa-spin fa-3x" aria-hidden="true">
+                    </i>
+                </div>
+            </div>
             <img check-image ng-src="img/catalogo/{{product.imagen1}}.jpg" alt="Image" class="modal-img-preview">
             <br>
         </div>
@@ -15,7 +20,7 @@
             <p>{{product.descripcion}}</p>
         </div>
         <hr>
-        <div class="panel-body" ng-if="product.tecnica">
+        <div class="panel-body" ng-if="product.tecnica != '' ">
             <h3>Especificaciones</h3>
             <br>
             <ul class="list-group">

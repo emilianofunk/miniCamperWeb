@@ -54,7 +54,7 @@ Fixed Navigation
             <!-- /responsive nav button -->
             <!-- logo -->
             <h1 class="navbar-brand" >
-                <a href="#body">
+                <a href="/index-s.html">
                     <img src="img/logo.png" alt="Kasper Logo" style="height:37px">
                 </a>
             </h1>
@@ -80,9 +80,8 @@ BEGIN CONTENT
 <!--
 Home Slider
 ==================================== -->
-<section id="home" class="container-catalog"ng-app="catalogoApp">
+<section id="home" class="container-catalog"ng-app="catalogoApp" style="min-height: 660px;">
     <div class="" ng-controller="MainCtrl">
-
 
         <!-- BEGIN ASIDE -->
         <div class="col-md-3">
@@ -91,6 +90,9 @@ Home Slider
 
         <!-- BEGIN MAIN-->
         <div class="col-md-9" >
+            <br class="visible-sm-inline visible-xs-inline">
+            <br class="visible-sm-inline visible-xs-inline">
+
             <ol class="breadcrumb">
                 <li><a href="#"></a>{{categoryFilter}}</li>
                 <li><a href="#"></a>{{subcategoryFilter}}</li>
