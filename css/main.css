@@ -1066,6 +1066,19 @@ Catalogo
     height:100%;
 }
 
+.panel-error {
+    color: black;
+    background-color: #d9534f;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    padding: 30px;
+}
+
+.panel-error > .fa {
+    color: #f7ecb5;
+}
+
 .label-price {
     font-size: 1.1em;
     position: relative;

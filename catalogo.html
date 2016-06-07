@@ -95,6 +95,7 @@ Home Slider
                 <li><a href="#"></a>{{categoryFilter}}</li>
                 <li><a href="#"></a>{{subcategoryFilter}}</li>
             </ol>
+            <!--LOADING PANEL-->
             <div class="loading-spiner-holder" loading>
                 <div class="loading-spiner">
                     <div class="panel panel-loading">
@@ -104,6 +105,16 @@ Home Slider
                     </div>
                 </div>
             </div>
+            <!-- ERROR PANEL -->
+            <div class="panel panel-error" ng-if="showError">
+                <h1>UPS ...  </h1>
+                <br>
+                <p><i>HUBO UN ERROR AL SOLICITAR INFORMACIÓN. INTENTE NUEVAMENTE O VUELVA EN UNOS MINUTOS.</i></p>
+                <br>
+                <i class="fa fa-exclamation-triangle fa-3x" aria-hidden="true">
+                </i>
+            </div>
+
             <div class="gallery-modal-background" ng-click="hideGalleryModal()" ng-if="galleryModalShow">
                 <i class="fa fa-times fa-2x btn-close" aria-hidden="true" ng-click="hideGalleryModal()" ></i>
             </div>

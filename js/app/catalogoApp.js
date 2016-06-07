@@ -22,9 +22,9 @@ angular
     .controller('MainCtrl', ['$scope','$filter', 'productsFactory', function ($scope, $filter, productsFactory) {
 
         $scope.categories = [
-            {id: 1, name: 'accesorios' , subcategories : ['TODOS'] },
-            {id: 2, name: 'nautica'    , subcategories : ['TODOS'] },
-            {id: 3, name: 'trailers'   , subcategories : ['TODOS'] }
+            {id: 1, name: 'accesorios' , subcategories : [] },
+            {id: 2, name: 'nautica'    , subcategories : [] },
+            {id: 3, name: 'trailers'   , subcategories : [] }
         ];
 
         $scope.subCategories = [];
@@ -108,7 +108,7 @@ angular
             $scope.galleryModalShow = false;
         };
 
-        // GET data from Olapic API
+        // GET data from CSV file
         $scope.loadProducts = function() {
             if(!$scope.inProgress){
                 $scope.inProgress = true;
