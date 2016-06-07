@@ -80,6 +80,9 @@ angular
                     default:
                         'ERROR'
                 }
+                /* Convert categoria in array with the corresponding cagegoria plus 'todos' */
+                $scope.products[i].subcategoria = ['TODOS', $scope.products[i].subcategoria];
+                console.log($scope.products[i]);
             }
         }
 

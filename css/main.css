@@ -1268,3 +1268,13 @@ Footer
     padding: 15px 0;
     margin: 0px 15px;
 }
+
+.footer-catalogo {
+    bottom: 0px;
+    width: 100%;
+    padding: 20px 0px !important;
+}
+
+.footer-social {
+    margin:15px 0px;
+}
