@@ -113,6 +113,23 @@ $(function(){
         }
       });
     });
+
+    $('#choiceChico').click(function(event){
+        $( "#filterChico" ).click();
+    });
+
+    $('#choiceMediano').click(function(event){
+        $( "#filterMediano" ).click();
+    });
+
+    $('#choiceGrande').click(function(event){
+        $( "#filterGrande" ).click();
+    });
+
+    $('#choiceCasillas').click(function(event){
+        $( "#filterCasillas" ).click();
+    });
+
 });
 
 /* ========================================================================= */

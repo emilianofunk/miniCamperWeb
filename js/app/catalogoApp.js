@@ -22,9 +22,11 @@ angular
     .controller('MainCtrl', ['$scope','$filter', 'productsFactory', function ($scope, $filter, productsFactory) {
 
         $scope.categories = [
-            {id: 1, name: 'accesorios' , subcategories : [] },
-            {id: 2, name: 'nautica'    , subcategories : [] },
-            {id: 3, name: 'trailers'   , subcategories : [] }
+            {id: 1, name: 'minicampers' , subcategories : [] },
+            {id: 2, name: 'accesorios' , subcategories : [] },
+            {id: 3, name: 'nautica'    , subcategories : [] },
+            {id: 4, name: 'trailers'   , subcategories : [] },
+            {id: 5, name: 'casillas de tiro' , subcategories : [] }
         ];
 
         $scope.subCategories = [];
@@ -32,7 +34,7 @@ angular
         /**
          *  Angular scope variable for filtering by category and subcategories.
          */
-        $scope.categoryFilter = 'accesorios';
+        $scope.categoryFilter = 'minicampers';
         $scope.subcategoryFilter = 'TODOS';
 
         /**
@@ -50,7 +52,6 @@ angular
 
         function formatSpecs(specs) {
             var a = specs.split(/@/);
-            console.log(a);
 
             for(var i = 0; i < a.length; i++) {
                 a[i].replace(/@/,'');
@@ -67,22 +68,34 @@ angular
             }
 
             for(var i = 0; i < $scope.products.length; i++) {
-                switch($scope.products[i].categoria) {
-                    case 'accesorios':
-                        pushSubCategory($scope.categories[0], $scope.products[i].subcategoria);
-                        break;
-                    case 'nautica':
-                        pushSubCategory($scope.categories[1], $scope.products[i].subcategoria);
-                        break;
-                    case 'trailers':
-                        pushSubCategory($scope.categories[2], $scope.products[i].subcategoria);
-                        break
-                    default:
-                        'ERROR'
+                // console.log($scope.products[i].categoria);
+                if(typeof $scope.products[i] === 'object' ) {
+                    switch($scope.products[i].categoria) {
+                        case 'minicampers':
+                            pushSubCategory($scope.categories[0], $scope.products[i].subcategoria);
+                            break;
+                        case 'accesorios':
+                            pushSubCategory($scope.categories[1], $scope.products[i].subcategoria);
+                            break;
+                        case 'nautica':
+                            pushSubCategory($scope.categories[2], $scope.products[i].subcategoria);
+                            break;
+                        case 'trailers':
+                            pushSubCategory($scope.categories[3], $scope.products[i].subcategoria);
+                            break
+                        case 'casillas de tiro':
+                            pushSubCategory($scope.categories[4], $scope.products[i].subcategoria);
+                            break;
+                        default:
+                            console.log('ERROR: ' + $scope.products[i].categoria);
+                    }
+                    /* Convert categoria in array with the corresponding cagegoria plus 'todos' */
+                    $scope.products[i].subcategoria = ['TODOS', $scope.products[i].subcategoria];
+                } else {
+                    console.log('Error loading product: ' + (i + 1));
                 }
-                /* Convert categoria in array with the corresponding cagegoria plus 'todos' */
-                $scope.products[i].subcategoria = ['TODOS', $scope.products[i].subcategoria];
-                console.log($scope.products[i]);
+
+
             }
         }
 
@@ -115,12 +128,11 @@ angular
 
                 productsFactory.getProducts().then(function(result) {
                     $scope.products = result.data;
-                    //console.log(result);
                     $scope.inProgress = false;
                     $scope.getSubCategories();
 
                 }, function(error){
-                    console.log('error');
+                    console.log('error retrieving data');
                     $scope.showError = true;
                 });
             }
