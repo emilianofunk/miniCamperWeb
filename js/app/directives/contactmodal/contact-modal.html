@@ -1,0 +1,25 @@
+<div class="contact-modal-container">
+    <div class="panel-body" >
+        <div class="col-md-offset-2 col-md-8 col-sm-12 col-xs-12 wow fadeInLeft">
+            <div class="contact-form clearfix">
+                <form class="form" role="form" id="form-contact">
+                    <legend>Comprar productos</legend>
+                    <div class="input-field">
+                        <input type="text" class="form-control" name="name" placeholder="Nombre y apellido" required="" id="name_surname">
+                    </div>
+                    <div class="input-field">
+                        <input type="email" class="form-control" name="email" placeholder="Email" required="" id="email">
+                    </div>
+                    <div class="input-field message">
+                        <textarea name="message" class="form-control" placeholder="Productos de interés" required="" maxlength="500" id="message"></textarea>
+                    </div>
+                    <div class="input-field message">
+                        <p class="contact-success">Su mensaje ha sido enviado correctamente!</p>
+                        <p class="contact-error">Ups! Hubo un error, intente nuevamente en unos minutos!</p>
+                    </div>
+                    <input type="submit" class="btn btn-blue pull-right" value="Enviar Mensaje" id="msg-submit" ng-click="mail()">
+                </form>
+            </div> <!-- end .contact-form -->
+        </div>
+    </div>
+</div>

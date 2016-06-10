@@ -1117,6 +1117,23 @@ MODAL
     opacity: 0.8;
 }
 
+.contact-modal-background {
+    -webkit-transition: all .9s;
+    -moz-transition: all .9s;
+    -ms-transition: all .9s;
+    -o-transition: all .9s;
+    transition: all .9s;
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 6;
+    background: black;
+    opacity: 0.8;
+}
+
 .gallery-modal-container{
     position: fixed;
     width: 80%;
@@ -1127,10 +1144,25 @@ MODAL
     margin-right: auto;
     margin-left: auto;
     background: #E1E1E1;
-    /*border-radius: 5px;*/
     z-index: 6;
     right: 0;
-    /*padding: 4px;*/
+    max-height: 80%;
+    overflow: auto;
+    color: black;
+}
+
+.contact-modal-container {
+    position: fixed;
+    width: 80%;
+    max-width: 1000px;
+    left: 0;
+    top: 0;
+    margin-top: 90px;
+    margin-right: auto;
+    margin-left: auto;
+    background: #E1E1E1;
+    z-index: 7;
+    right: 0;
     max-height: 80%;
     overflow: auto;
     color: black;

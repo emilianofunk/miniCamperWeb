@@ -121,6 +121,16 @@ angular
             $scope.galleryModalShow = false;
         };
 
+        $scope.showContactModal = function () {
+            $scope.galleryModalShow = false;
+            $scope.contactModalShow = true;
+        };
+
+        $scope.hideContactModal = function () {
+            $scope.galleryModalShow = true;
+            $scope.contactModalShow = false;
+        };
+
         // GET data from CSV file
         $scope.loadProducts = function() {
             if(!$scope.inProgress){
@@ -137,6 +147,28 @@ angular
                 });
             }
         };
+
+        $scope.sendMail = function() {
+            var data = {
+                name_surname: $('#name_surname').val(),
+                email: $('#email').val(),
+                subject: 'Info',
+                message: $('#message').val()
+            };
+
+            if (data.name_surname && data.email && data.message) {
+                $.ajax({
+                    type: "POST",
+                    url: "email.php",
+                    data: data,
+                    success: function(msg){
+                        $('.contact-success').fadeIn().delay(3000).fadeOut();
+                        $('#form-contact')[0].reset();
+                        $('.contact-success').focus();
+                    }
+                });
+            }
+        }
 
         onInit();
 
@@ -190,8 +222,18 @@ angular
         return {
             restrict: 'E',
             scope : {
-                product: '='
+                product: '=',
+                action: '&'
             },
             templateUrl: 'js/app/directives/gallerymodal/gallery-modal.html'
+        };
+    })
+    .directive('contactModal', function() {
+        return {
+            restrict: 'E',
+            scope : {
+                mail: '&'
+            },
+            templateUrl: 'js/app/directives/contactmodal/contact-modal.html'
         };
     });
