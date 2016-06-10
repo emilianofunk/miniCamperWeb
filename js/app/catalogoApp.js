@@ -152,11 +152,16 @@ angular
             var data = {
                 name_surname: $('#name_surname').val(),
                 email: $('#email').val(),
-                subject: 'Info',
-                message: $('#message').val()
+                subject: 'Compra',
+                message: 'DATOS DEL CLIENTE: /n' +
+                    'Nombre y apellido: ' +  $('#name_surname').val() + '/n' +
+                    'Teléfono: ' +  $('#phone').val() + '/n' +
+                    'Ciudad: ' +  $('#city').val() + '/n' +
+                    'Motivo: ' +  $('#message').val()
             };
 
-            if (data.name_surname && data.email && data.message) {
+            if (data.name_surname && data.email && data.message &&
+                $('#phone').val() && $('#city').val() && $('#message').val()) {
                 $.ajax({
                     type: "POST",
                     url: "email.php",
