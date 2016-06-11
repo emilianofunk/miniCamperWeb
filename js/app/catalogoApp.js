@@ -56,6 +56,7 @@ angular
             for(var i = 0; i < a.length; i++) {
                 a[i].replace(/@/,'');
             }
+            a.splice(0,1);
             return a;
         }
 
@@ -153,15 +154,13 @@ angular
                 name_surname: $('#name_surname').val(),
                 email: $('#email').val(),
                 subject: 'Compra',
-                message: 'DATOS DEL CLIENTE: /n' +
-                    'Nombre y apellido: ' +  $('#name_surname').val() + '/n' +
-                    'Teléfono: ' +  $('#phone').val() + '/n' +
-                    'Ciudad: ' +  $('#city').val() + '/n' +
+                message: 'DATOS DEL CLIENTE:  ' +
+                    'Nombre y apellido: ' +  $('#name_surname').val() + ' | ' +
+                    'Ciudad: ' +  $('#city').val() + ' | ' +
                     'Motivo: ' +  $('#message').val()
             };
 
-            if (data.name_surname && data.email && data.message &&
-                $('#phone').val() && $('#city').val() && $('#message').val()) {
+            if (data.name_surname && data.email && data.message && $('#city').val() && $('#message').val()) {
                 $.ajax({
                     type: "POST",
                     url: "email.php",

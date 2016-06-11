@@ -17,6 +17,7 @@
         <div class="panel-body">
             <h3>Descripcion</h3>
             <br>
+            <p ng-if="product.descripcion == '' ">No hay descripcion disponible.</p>
             <p>{{product.descripcion}}</p>
         </div>
         <hr>
@@ -28,7 +29,8 @@
             </ul>
             <br>
             <p class="bg-primary bg-price">PRECIO: {{product.precio}}</p>
-            <a href="#" ng-click="action()">Comprar productos</a>
+            <br>
+            <a class="bg-primary bg-buy" ng-click="action()">Comprar productos</a>
         </div>
     </div>
 </div>

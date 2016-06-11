@@ -537,9 +537,9 @@ OTROS PRODUCTOS
 }
 
 .jumbotron {
-    background-position: center;
     padding: 48px 20px;
     background-size: 100%;
+    background: no-repeat center;
     color: black;
     border: solid 4px aliceblue;
     height: 230px;
@@ -547,14 +547,42 @@ OTROS PRODUCTOS
 
 .jumbotron-accesorios{
     background-image: url("../img/portfolio/accesorios.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-color: white;
 }
 
 .jumbotron-trailer{
-    background-image: url("../img/portfolio/trailer.jpeg");
+    background-image: url("../img/portfolio/trailer.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-color: white;
 }
 
 .jumbotron-nautica{
     background-image: url("../img/portfolio/nautica.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-color: white;
+}
+
+.jumbotron-minicamper{
+    background-image: url("../img/portfolio/minicampers.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-color: white;
+}
+
+.jumbotron-casilla{
+    background-image: url("../img/portfolio/casilla.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-color: white;
 }
 
 .jumbotron:hover{
@@ -1209,6 +1237,30 @@ MODAL
     text-align: center;
     max-width: 33%;
 }
+
+.bg-buy {
+    padding: 5px;
+    margin: 0px auto;
+    text-align: center;
+    max-width: 25%;
+    color: white;
+    background-color: teal;
+    -webkit-transition: all .1s ease-in-out; /* Safari */
+    display: block;
+}
+
+.bg-buy:hover {
+    cursor: hand;
+    cursor: pointer;
+    border: 2px #16a7d0 solid;
+    color: #16a7d0 ;
+    -webkit-transition: all .1s ease-in-out; /* Safari */
+    transition: all .1s ease-in-out;
+}
+
+a.bg-primary:hover {
+    background-color: lightgrey;
+}
 /*============================================================
 Footer
 ============================================================*/
@@ -1337,4 +1389,18 @@ Footer
     cursor: default;
     background-color: #16a7d0;
     border-color: #16a7d0;
+}
+
+.animate-if.ng-enter, .animate-if.ng-leave {
+    transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
+}
+
+.animate-if.ng-enter,
+.animate-if.ng-leave.ng-leave-active {
+    opacity:0;
+}
+
+.animate-if.ng-leave,
+.animate-if.ng-enter.ng-enter-active {
+    opacity:1;
 }

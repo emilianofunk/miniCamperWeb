@@ -5,7 +5,11 @@
 		endif;
 		if (filter_var($_REQUEST['email'], FILTER_VALIDATE_EMAIL)):
 			// receiver email address
-			$to = 'info@outworktime.com';
+			if($_REQUEST['email'] == 'Compra') {
+			    $to = 'compras@outworktime.com';
+			} else {
+			    $to = 'info@outworktime.com';
+			}
 			// prepare header
 			$header = 'From: '. $_REQUEST['name_surname'] . ' <'. $_REQUEST['email'] .'>'. "\r\n";
 			$header .= 'Reply-To:  '. $_REQUEST['name_surname'] . ' <'. $_REQUEST['email'] .'>'. "\r\n";

@@ -117,14 +117,14 @@ Home Slider
                 </i>
             </div>
 
-            <div class="gallery-modal-background" ng-click="hideGalleryModal()" ng-if="galleryModalShow">
+            <div class="gallery-modal-background animate-if" ng-click="hideGalleryModal()" ng-if="galleryModalShow" >
                 <i class="fa fa-times fa-2x btn-close" aria-hidden="true" ng-click="hideGalleryModal()" ></i>
             </div>
-            <image-modal ng-if="galleryModalShow" action="showContactModal()" product="productModal" action="hideGalleryModal()"></image-modal>
-            <div class="contact-modal-background" ng-click="hideContactModal()" ng-if="contactModalShow">
+            <image-modal class="animate-if" ng-if="galleryModalShow" action="showContactModal()" product="productModal" action="hideGalleryModal()"></image-modal>
+            <div class="contact-modal-background animate-if" ng-click="hideContactModal()" ng-if="contactModalShow">
                 <i class="fa fa-times fa-2x btn-close" aria-hidden="true" ng-click="hideContactModal()" ></i>
             </div>
-            <contact-modal ng-if="contactModalShow" mail="sendMail()" > </contact-modal>
+            <contact-modal class="animate-if" ng-if="contactModalShow" mail="sendMail()" > </contact-modal>
             <!-- BEGIN MEDIA UNIT -->
             <div class="media media-catalog" dir-paginate="product in products |
             filter : (!!categoryFilter || undefined) && { 'categoria': categoryFilter } |
