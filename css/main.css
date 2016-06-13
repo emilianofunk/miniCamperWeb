@@ -413,7 +413,20 @@ Service Bottom
     width: 45%;
 }
 
-.service-features h3 {
+.service-features.visible-xs.visible-sm {
+    top:30%;
+    padding:30px;
+    width: 100%;
+    position: relative !important;
+    margin-bottom: 30px;
+}
+
+@media only screen and (max-width: 767px){
+    .service-features {
+        height: inherit !important;
+    }
+}
+    .service-features h3 {
     margin-bottom: 60px;
     text-transform: uppercase;
 }
