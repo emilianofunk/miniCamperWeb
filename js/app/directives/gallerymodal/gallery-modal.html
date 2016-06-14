@@ -1,7 +1,7 @@
 <div class="gallery-modal-container">
     <div class="panel panel-primary">
         <div class="panel-heading">
-            <h2 class="panel-title" style="font-size: 24px;">{{product.titulo}}</h2>
+            <h1 class="panel-title" style="font-size: 24px;">{{product.titulo}}</h1>
         </div>
         <div class="panel-body">
             <div class="loading-spiner-holder" loading>
@@ -10,7 +10,12 @@
                     </i>
                 </div>
             </div>
-            <img check-image ng-src="img/catalogo/{{product.imagen1}}.jpg" alt="Image" class="modal-img-preview">
+            <img check-image ng-src="{{product.images[0].img}}" alt="Image" class="modal-img-preview">
+            <!--<a href="img/catalogo/{{product.imagen1}}.jpg" title="" rel="portfolio" class="fancybox" >asd</a>-->
+            <div style="display: block;text-align: center;">
+                <ng-gallery images="product.images" thumbs-num="6">
+                </ng-gallery>
+            </div>
             <br>
         </div>
         <hr>

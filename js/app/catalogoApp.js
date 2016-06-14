@@ -14,12 +14,22 @@ $(function(){
         alert($(this).parents('.panel-heading').attr('class'));
     });
 
+    $(".fancybox").fancybox({
+        padding: 0,
+
+        openEffect : 'elastic',
+        openSpeed  : 650,
+
+        closeEffect : 'elastic',
+        closeSpeed  : 550,
+    });
 });
 
 angular
-    .module('catalogoApp', ['angularUtils.directives.dirPagination'])
+    .module('catalogoApp', ['angularUtils.directives.dirPagination','jkuri.gallery'])
     .config(function () {})
     .controller('MainCtrl', ['$scope','$filter', 'productsFactory', function ($scope, $filter, productsFactory) {
+        var self = this;
 
         $scope.categories = [
             {id: 1, name: 'minicampers' , subcategories : [] },
@@ -59,6 +69,53 @@ angular
             a.splice(0,1);
             return a;
         }
+
+        function formatImages(product) {
+            var images = [];
+
+            if(product.imagen1) {
+                images.push({
+                    thumb: 'img/catalogo/'+ product.imagen1 +'.jpg', img: 'img/catalogo/'+ product.imagen1 +'.jpg', description: ''
+                });
+            }
+            if(product.imagen2) {
+                images.push({
+                    thumb: 'img/catalogo/'+ product.imagen2 +'.jpg', img: 'img/catalogo/'+ product.imagen2 +'.jpg', description: ''
+                });
+            }
+            if(product.imagen3) {
+                images.push({
+                    thumb: 'img/catalogo/'+ product.imagen3 +'.jpg', img: 'img/catalogo/'+ product.imagen3 +'.jpg', description: ''
+                });
+            }
+            if(product.imagen4) {
+                images.push({
+                    thumb: 'img/catalogo/'+ product.imagen4 +'.jpg', img: 'img/catalogo/'+ product.imagen4 +'.jpg', description: ''
+                });
+            }
+            if(product.imagen5) {
+                images.push({
+                    thumb: 'img/catalogo/'+ product.imagen5 +'.jpg', img: 'img/catalogo/'+ product.imagen5 +'.jpg', description: ''
+                });
+            }
+            if(product.imagen6) {
+                images.push({
+                    thumb: 'img/catalogo/'+ product.imagen6 +'.jpg', img: 'img/catalogo/'+ product.imagen6+'.jpg', description: ''
+                });
+            }
+            if(product.imagen7) {
+                images.push({
+                    thumb: 'img/catalogo/'+ product.imagen7 +'.jpg', img: 'img/catalogo/'+ product.imagen7 +'.jpg', description: ''
+                });
+            }
+            if(product.imagen8) {
+                images.push({
+                    thumb: 'img/catalogo/'+ product.imagen8 +'.jpg', img: 'img/catalogo/'+ product.imagen8 +'.jpg', description: ''
+                });
+            }
+
+            return images;
+        };
 
         $scope.getSubCategories = function () {
 
@@ -114,6 +171,7 @@ angular
             if(typeof product.tecnica !== 'object') {
                 product.tecnica = formatSpecs(product.tecnica);
             }
+            product.images = formatImages(product);
             $scope.productModal = product;
             $scope.galleryModalShow = true;
         };
