@@ -77,6 +77,10 @@ angular
                 images.push({
                     thumb: 'img/catalogo/'+ product.imagen1 +'.jpg', img: 'img/catalogo/'+ product.imagen1 +'.jpg', description: ''
                 });
+            } else {
+                images.push({
+                    thumb: 'img/catalogo/noimage.jpg', img: 'img/catalogo/noimage.jpg', description: ''
+                });
             }
             if(product.imagen2) {
                 images.push({
