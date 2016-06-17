@@ -60,7 +60,7 @@ $(function(){
     /*  Facts count
     /* ========================================================================= */
 
-    "use strict";
+    'use strict';
     $(".fact-item").appear(function () {
         $(".fact-item [data-to]").each(function () {
             var e = $(this).attr("data-to");
@@ -69,8 +69,8 @@ $(function(){
                 to: e,
                 speed: 3e3,
                 refreshInterval: 50
-            })
-        })
+            });
+        });
     });
 
 /* ========================================================================= */
