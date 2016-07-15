@@ -1459,3 +1459,8 @@ Footer
     -o-transition: none;
      transition: none;
 }
+
+.mask a {
+    font-size: 18px;
+    text-transform: uppercase;
+}
