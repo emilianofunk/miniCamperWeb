@@ -1249,11 +1249,28 @@ MODAL
     cursor: hand;
 }
 
+.btn-comprar {
+  width: 140px;
+  background: #ec971f;
+  color: white;
+  padding: 5px;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.btn-consulta {
+  width: 140px;
+  background: #337ab7;
+  color: white;
+  padding: 5px;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
 .bg-price {
     padding: 15px;
     margin: 0px auto;
     text-align: center;
-    max-width: 35%;
 }
 
 .bg-buy {
@@ -1261,7 +1278,7 @@ MODAL
     padding: 20px;
     margin: 0px auto;
     text-align: center;
-    max-width: 25%;
+    /*max-width: 25%; */
     background-color: teal;
     color: ghostwhite;
     -webkit-transition: all .1s ease-in-out; /* Safari */
@@ -1463,4 +1480,17 @@ Footer
 .mask a {
     font-size: 18px;
     text-transform: uppercase;
+}
+
+/*============================================================
+GALLERY MODAL
+============================================================*/
+
+.panel-body-left {
+    float: left;
+    min-width: 600px;
+}
+
+.panel-body-right {
+
 }
