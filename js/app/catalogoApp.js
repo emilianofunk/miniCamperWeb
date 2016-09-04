@@ -47,16 +47,6 @@ angular
   $scope.categoryFilter = 'minicampers';
   $scope.subcategoryFilter = 'TODOS';
 
-  /**
-  * anonymous function - run then init the controller
-  *
-  * @return {type}  nothing ...
-  */
-  var onInit = function () {
-    $scope.loadProducts();
-    loadParameters();
-  };
-
   function loadParameters() {
     // parameter for filtering mcchico, mediano o grande
     if(getParameterByName('mc')) {
@@ -149,7 +139,7 @@ angular
     }
 
     return images;
-  };
+  }
 
   function getParameterByName(name, url) {
     if (!url) url = window.location.href;
@@ -160,6 +150,16 @@ angular
     if (!results[2]) return '';
     return decodeURIComponent(results[2].replace(/\+/g, " "));
   }
+
+  /**
+  * anonymous function - run then init the controller
+  *
+  * @return {type}  nothing ...
+  */
+  var onInit = function () {
+    $scope.loadProducts();
+    loadParameters();
+  };
 
   $scope.getSubCategories = function () {
 
@@ -184,7 +184,7 @@ angular
           break;
           case 'trailers':
           pushSubCategory($scope.categories[3], $scope.products[i].subcategoria);
-          break
+          break;
           case 'casillas de tiro':
           pushSubCategory($scope.categories[4], $scope.products[i].subcategoria);
           break;
@@ -196,21 +196,19 @@ angular
       } else {
         console.log('Error loading product: ' + (i + 1));
       }
-
-
     }
-  }
+  };
 
   $scope.changeCategory = function (category) {
     $scope.categoryFilter = category;
     $scope.subcategoryFilter = 'TODOS';
-  }
+  };
 
   $scope.changeSubCategory = function (category, subcategory) {
     $scope.categoryFilter = category;
     console.log(subcategory);
     $scope.subcategoryFilter = subcategory;
-  }
+  };
 
   $scope.showGalleryModal = function (product) {
     if(typeof product.tecnica !== 'object') {
@@ -244,9 +242,8 @@ angular
         $scope.products = result.data;
         $scope.inProgress = false;
         $scope.getSubCategories();
-
       }, function(error){
-        console.log('error retrieving data');
+        console.log('error retrieving data ' + error);
         $scope.showError = true;
       });
     }
@@ -303,8 +300,7 @@ angular
     }
   };
 })
-.directive('loading',  ['$http' ,function ($http)
-{
+.directive('loading',  ['$http' ,function ($http) {
   return {
     restrict: 'A',
     link: function (scope, elm, attrs)

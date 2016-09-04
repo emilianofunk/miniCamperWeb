@@ -87,6 +87,35 @@ Home Slider
 
         <!-- BEGIN MAIN-->
         <div class="col-md-10 col-md-offset-1" >
+          <div class="jumbotron" style="height: auto;line-height: 1.5em;">
+              <h1 style="font-size: 40px;">¿Cómo comprar?</h1>
+              <br>
+              <br>
+              <ul class="list-group">
+                <li class="list-group-item">
+                  1. - Seleccioná el producto que querés comprar y hacé click en el botón “comprar”.
+                </li>
+                <li class="list-group-item">
+                  2. - Luego de hacer click en el botón comprar, te dirige a la página de compra de Mercadopago, donde podrás elegir las diferentes formas de pago.
+                </li>
+                <li class="list-group-item">
+                  3. - Para comprar por internet utilizamos el sistema de <a style="position: static;" href="https://www.mercadopago.com.ar/ayuda/medios-de-pago-cuotas-promociones_264">Mercadopago</a>, que te permite realizar la compra mediante diversas tarjetas de crédito, o bien en efectivo con rapipago, red link, entre otros.
+                  <img src="img/tarjetas.jpg" alt="tarjetas" width="150px" style="margin: 20px;">
+                </li>
+                <li class="list-group-item">
+                  4. - Por otras formas de pago, comunícate con nosotros utilizando el botón “consultas” o hace click <a style="position: static;" href="contact.html">AQUI</a>.
+                </li>
+                <li class="list-group-item">
+                  5. - La entrega de los productos tiene una demora aproximada de entre 15 y 30 días (según el producto).
+                </li>
+                <li class="list-group-item">
+                  6. - Hacemos envíos a todo el país y trabajamos con diversas empresas de transporte.
+                </li>
+                <li class="list-group-item">
+                  7. - Para acordar la forma de entrega (transporte, costos de envío, demoras, etc), comunícate con nosotros utilizando el botón “consultas”. si se puede poner la imagen del botón consultas)
+                </li>
+              </ul>
+          </div>
 
         </div>
     </div>
@@ -153,15 +182,22 @@ JavaScripts
 <!-- jQuery Appear -->
 <script src="js/jquery.appear.js"></script>
 <!-- countTo -->
-<!-- owl carousel
-<script src="js/owl.carousel.min.js"></script> -->
-<!-- Angular script -->
-<script src="js/angular.min.js"></script>
-<!-- theme custom scripts -->
-<script src="js/app/catalogoApp.js"></script>
-<script src="js/app/directives/menu/menu.js"></script>
-<script src="js/app/directives/paginator/dirPagination.js"></script>
-<script src="js/ngGallery.js"></script>
+<script type="text/javascript">
+$(function(){
+  jQuery("#navigation").css("background-color","#16a7d0");
+  jQuery("#navigation").addClass("animated-nav");
+
+  $('.panel-heading a').click(function() {
+    $('.panel-heading').removeClass('actives');
+    $(this).parents('.panel-heading').addClass('actives');
+
+    $('.panel-title').removeClass('actives'); //just to make a visual sense
+    $(this).parent().addClass('actives'); //just to make a visual sense
+
+    alert($(this).parents('.panel-heading').attr('class'));
+  });
+});
+</script>
 
 </body>
 </html>

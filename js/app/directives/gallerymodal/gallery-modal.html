@@ -1,10 +1,10 @@
 <div class="gallery-modal-container">
-    <div class="panel panel-primary">
+    <div class="panel panel-primary" >
         <div class="panel-heading">
             <h1 class="panel-title" style="font-size: 24px;">{{product.titulo}}</h1>
         </div>
         <div class="panel-body">
-            <div class="loading-spiner-holder" loading>
+          <div class="loading-spiner-holder" loading>
                 <div class="loading-spiner">
                     <i class="fa fa-spinner fa-spin fa-3x" aria-hidden="true">
                     </i>
@@ -20,19 +20,20 @@
             <div class="col-md-3">
               <div style="width:200px; text-align: center;">
                   <br>
-                  <p style="padding: 10px; font-size: 1.5em; background-color: lightgrey; color: black;">AR$ {{product.precio}}</p>
+                  <p style="padding: 10px; font-size: 1.5em; background-color: lightgrey; color: black;">{{product.precio}}</p>
                   <small>(IVA no incluido) - Precio para venta online</small>
+                  <br>
                   <br>
                   <br>
                   <a href="" style="color: black; font-weight: bold; font-size: 1.2em; display: inline; margin: auto;">¿Cómo comprar?</a>
                   <br>
                   <br>
-                  <a href="#" class="btn btn-default btn-consulta" >Consultas</a>
-                  <!-- <a class="bg-primary bg-buy" ng-click="action()">Consultas</a> -->
+                  <br>
+                  <a href="contact.html" class="btn btn-default btn-consulta">Consultas</a>
                   <br>
                   <br>
-                  <a href="#" class="btn btn-default btn-comprar" >Comprar</a>
-                  <!-- <a class="bg-primary bg-buy" ng-click="action()">Comprar</a> -->
+                  <a ng-if="product.MERCADOPAGO != ''" href="{{product.MERCADOPAGO}}" class="btn btn-default btn-comprar" style="width: 190px; height: auto; word-break: break-word; white-space: normal;">Comprar con MERCADOPAGO</a>
+                  <a ng-if="product.MERCADOPAGO == ''" href="contact.html" class="btn btn-default btn-comprar">Comprar</a>
                   <br>
                   <br>
               </div>
@@ -56,12 +57,13 @@
                 <li class="list-group-item" ng-repeat="spec in product.tecnica">{{spec}}</li>
             </ul>
         </div>
-        <div>
+        <!-- <div>
             <br>
             <p class="bg-primary bg-price">PRECIO: {{product.precio}}</p>
             <br>
             <a class="bg-primary bg-buy" ng-click="action()">Comprar productos</a>
             <br><br>
-        </div>
+        </div> -->
     </div>
+    <!-- <contact-modal class="animate-if" ng-if="contactModalShow" mail="sendMail()" > </contact-modal> -->
 </div>

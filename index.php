@@ -8,8 +8,9 @@
   $router->map('GET','/', 'index-s.html', 'home');
   //$router->map('GET','/', 'index-b.html', 'build');
   $router->map('GET','/catalogo/', 'catalogo.html');
+  $router->map('GET','/contact', 'contact.html');
 
-
+  die();
   /* Match the current request */
   $match = $router->match();
   if($match) {

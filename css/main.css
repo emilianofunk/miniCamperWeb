@@ -1164,7 +1164,7 @@ MODAL
     opacity: 0.8;
 }
 
-.contact-modal-background {
+/*.contact-modal-background {
     -webkit-transition: all .9s;
     -moz-transition: all .9s;
     -ms-transition: all .9s;
@@ -1179,7 +1179,7 @@ MODAL
     z-index: 6;
     background: black;
     opacity: 0.8;
-}
+}*/
 
 .gallery-modal-container{
     position: fixed;
@@ -1251,6 +1251,7 @@ MODAL
 
 .btn-comprar {
   width: 140px;
+  height: 40px;
   background: #ec971f;
   color: white;
   padding: 5px;
@@ -1260,6 +1261,7 @@ MODAL
 
 .btn-consulta {
   width: 140px;
+  height: 40px;
   background: #337ab7;
   color: white;
   padding: 5px;
@@ -1278,7 +1280,6 @@ MODAL
     padding: 20px;
     margin: 0px auto;
     text-align: center;
-    /*max-width: 25%; */
     background-color: teal;
     color: ghostwhite;
     -webkit-transition: all .1s ease-in-out; /* Safari */
